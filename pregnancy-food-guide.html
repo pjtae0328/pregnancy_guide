@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>임신 주차별 음식 안전 가이드 🤰</title>
+  <meta name="description" content="임신 기간 중 먹으면 안 되는 음식, 줄여야 하는 음식, 주의해야 하는 음식을 주차별로 정리한 가이드입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f0f1a;
+      --bg-secondary: #1a1a2e;
+      --bg-card: #16213e;
+      --bg-card-hover: #1a2745;
+      --text-primary: #e8e8f0;
+      --text-secondary: #a0a0b8;
+      --text-muted: #6b6b80;
+      --accent-danger: #ff4757;
+      --accent-danger-bg: rgba(255, 71, 87, 0.08);
+      --accent-danger-border: rgba(255, 71, 87, 0.25);
+      --accent-warning: #ffa502;
+      --accent-warning-bg: rgba(255, 165, 2, 0.08);
+      --accent-warning-border: rgba(255, 165, 2, 0.25);
+      --accent-caution: #2ed573;
+      --accent-caution-bg: rgba(46, 213, 115, 0.08);
+      --accent-caution-border: rgba(46, 213, 115, 0.25);
+      --accent-info: #70a1ff;
+      --accent-info-bg: rgba(112, 161, 255, 0.08);
+      --accent-pink: #ff6b9d;
+      --accent-purple: #a855f7;
+      --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-pink: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-warm: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+      --shadow-glow: 0 0 40px rgba(102, 126, 234, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      padding: 80px 20px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 50%, rgba(102, 126, 234, 0.12) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+      animation: heroFloat 20s ease-in-out infinite;
+    }
+
+    @keyframes heroFloat {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(30px, -20px) rotate(1deg); }
+      66% { transform: translate(-20px, 15px) rotate(-1deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero-emoji {
+      font-size: 4rem;
+      margin-bottom: 16px;
+      animation: bounce 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #e8e8f0 0%, #ff6b9d 50%, #a855f7 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 4s ease-in-out infinite;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ===== SEVERITY LEGEND ===== */
+    .legend-section {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .legend-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .legend-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .legend-item.danger {
+      border-color: var(--accent-danger-border);
+      background: var(--accent-danger-bg);
+    }
+
+    .legend-item.warning {
+      border-color: var(--accent-warning-border);
+      background: var(--accent-warning-bg);
+    }
+
+    .legend-item.caution {
+      border-color: var(--accent-caution-border);
+      background: var(--accent-caution-bg);
+    }
+
+    .legend-icon {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+    }
+
+    .legend-label {
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 2px;
+    }
+
+    .legend-item.danger .legend-label { color: var(--accent-danger); }
+    .legend-item.warning .legend-label { color: var(--accent-warning); }
+    .legend-item.caution .legend-label { color: var(--accent-caution); }
+
+    .legend-desc {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ===== TAB NAVIGATION ===== */
+    .tab-nav {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background: rgba(15, 15, 26, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tab-list {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 4px;
+    }
+
+    .tab-list::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      flex-shrink: 0;
+      padding: 10px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50px;
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .tab-btn.active {
+      background: var(--gradient-hero);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 16px rgba(102, 126, 234, 0.35);
+    }
+
+    /* ===== CONTENT SECTIONS ===== */
+    .content-area {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+    }
+
+    .trimester-section {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .trimester-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+
+    .week-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--gradient-hero);
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ===== SEVERITY GROUPS ===== */
+    .severity-group {
+      margin-bottom: 28px;
+    }
+
+    .severity-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.3px;
+    }
+
+    .severity-title.danger {
+      background: linear-gradient(135deg, rgba(255, 71, 87, 0.15), rgba(255, 71, 87, 0.05));
+      color: var(--accent-danger);
+      border-left: 3px solid var(--accent-danger);
+    }
+
+    .severity-title.warning {
+      background: linear-gradient(135deg, rgba(255, 165, 2, 0.15), rgba(255, 165, 2, 0.05));
+      color: var(--accent-warning);
+      border-left: 3px solid var(--accent-warning);
+    }
+
+    .severity-title.caution {
+      background: linear-gradient(135deg, rgba(46, 213, 115, 0.15), rgba(46, 213, 115, 0.05));
+      color: var(--accent-caution);
+      border-left: 3px solid var(--accent-caution);
+    }
+
+    .food-list {
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: none;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      overflow: hidden;
+    }
+
+    .food-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--bg-card);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: background 0.2s ease;
+      cursor: default;
+    }
+
+    .food-item:last-child {
+      border-bottom: none;
+    }
+
+    .food-item:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .food-emoji {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .food-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .food-name {
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 3px;
+      color: var(--text-primary);
+    }
+
+    .food-reason {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .food-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 50px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .food-tag.danger {
+      background: var(--accent-danger-bg);
+      color: var(--accent-danger);
+      border: 1px solid var(--accent-danger-border);
+    }
+
+    .food-tag.warning {
+      background: var(--accent-warning-bg);
+      color: var(--accent-warning);
+      border: 1px solid var(--accent-warning-border);
+    }
+
+    .food-tag.caution {
+      background: var(--accent-caution-bg);
+      color: var(--accent-caution);
+      border: 1px solid var(--accent-caution-border);
+    }
+
+    /* ===== ALL-PERIOD COMMON SECTION ===== */
+    .common-banner {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(168, 85, 247, 0.1));
+      border: 1px solid rgba(102, 126, 234, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .common-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.15), transparent 70%);
+      border-radius: 50%;
+      transform: translate(30%, -30%);
+    }
+
+    .common-banner h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--accent-info);
+    }
+
+    .common-banner p {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ===== TIP CARD ===== */
+    .tip-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-top: 32px;
+    }
+
+    .tip-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-pink);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tip-list {
+      list-style: none;
+    }
+
+    .tip-list li {
+      padding: 8px 0;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .tip-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tip-list li::before {
+      content: '✦';
+      color: var(--accent-purple);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-container {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      padding: 0 20px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px 18px 14px 46px;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-xl);
+      color: var(--text-primary);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box input:focus {
+      border-color: rgba(102, 126, 234, 0.5);
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      opacity: 0.4;
+    }
+
+    .search-results-count {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      display: none;
+    }
+
+    .search-results-count.visible {
+      display: block;
+    }
+
+    .food-item.hidden {
+      display: none;
+    }
+
+    .food-item.highlight {
+      background: rgba(102, 126, 234, 0.08) !important;
+    }
+
+    .severity-group.hidden {
+      display: none;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .footer .disclaimer {
+      background: rgba(255, 71, 87, 0.06);
+      border: 1px solid rgba(255, 71, 87, 0.15);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer .disclaimer p {
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gradient-hero);
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 28px rgba(102, 126, 234, 0.5);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 60px 16px 40px;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .hero-emoji {
+        font-size: 3rem;
+      }
+
+      .legend {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+
+      .legend-item {
+        padding: 12px 8px;
+      }
+
+      .legend-icon {
+        font-size: 1.3rem;
+      }
+
+      .legend-label {
+        font-size: 0.75rem;
+      }
+
+      .legend-desc {
+        font-size: 0.65rem;
+      }
+
+      .tab-btn {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.25rem;
+      }
+
+      .food-item {
+        padding: 12px 14px;
+        gap: 12px;
+      }
+
+      .food-emoji {
+        font-size: 1.3rem;
+        width: 32px;
+        height: 32px;
+      }
+
+      .food-name {
+        font-size: 0.86rem;
+      }
+
+      .food-reason {
+        font-size: 0.74rem;
+      }
+
+      .content-area {
+        padding: 20px 16px 80px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+
+      .legend {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
+        padding: 12px 14px;
+      }
+
+      .legend-icon {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-emoji">🤰</div>
+      <h1>임신 중 음식 안전 가이드</h1>
+      <p>건강한 임신을 위한 주차별 음식 가이드<br>경중에 따라 한눈에 확인하세요</p>
+    </div>
+  </section>
+
+  <!-- LEGEND -->
+  <section class="legend-section">
+    <div class="legend">
+      <div class="legend-item danger">
+        <div class="legend-icon">🚫</div>
+        <div class="legend-label">금지 음식</div>
+        <div class="legend-desc">절대 섭취 금지</div>
+      </div>
+      <div class="legend-item warning">
+        <div class="legend-icon">⚠️</div>
+        <div class="legend-label">제한 음식</div>
+        <div class="legend-desc">양을 줄이거나 주의</div>
+      </div>
+      <div class="legend-item caution">
+        <div class="legend-icon">💡</div>
+        <div class="legend-label">주의 음식</div>
+        <div class="legend-desc">상황에 따라 조심</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <div class="search-container">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="음식 이름으로 검색 (예: 참치, 커피, 치즈...)">
+    </div>
+    <div class="search-results-count" id="searchCount"></div>
+  </div>
+
+  <!-- TAB NAVIGATION -->
+  <nav class="tab-nav">
+    <div class="tab-list" role="tablist">
+      <button class="tab-btn active" data-tab="all" role="tab" id="tab-all">📋 전체 기간</button>
+      <button class="tab-btn" data-tab="trimester1" role="tab" id="tab-trimester1">🌱 초기 (1~12주)</button>
+      <button class="tab-btn" data-tab="trimester2" role="tab" id="tab-trimester2">🌿 중기 (13~27주)</button>
+      <button class="tab-btn" data-tab="trimester3" role="tab" id="tab-trimester3">🌸 후기 (28~40주)</button>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content-area">
+
+    <!-- ===== 전체 기간 ===== -->
+    <section class="trimester-section active" id="all" role="tabpanel">
+      <div class="section-header">
+        <h2>📋 전체 임신 기간 공통</h2>
+        <p>임신 전 기간에 걸쳐 주의해야 하는 음식입니다</p>
+      </div>
+
+      <div class="common-banner">
+        <h3>💜 임신 전 기간 공통 주의사항</h3>
+        <p>아래 음식들은 임신 전 기간에 걸쳐 주의가 필요합니다. 특히 금지 음식은 어떤 주차에서든 절대 피하셔야 합니다. 개인 체질에 따라 반응이 다를 수 있으니, 반드시 담당 의료진과 상담하세요.</p>
+      </div>
+
+      <!-- 금지 -->
+      <div class="severity-group" data-severity="danger">
+        <div class="severity-title danger">🚫 절대 금지 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="술 알코올 맥주 소주 와인">
+            <div class="food-emoji">🍺</div>
+            <div class="food-info">
+              <div class="food-name">술 (모든 알코올)</div>
+              <div class="food-reason">태아 알코올 스펙트럼 장애(FASD)를 유발할 수 있습니다. 소량이라도 안전한 양은 없습니다. 맥주, 와인, 소주 등 모든 종류의 알코올을 포함합니다.</div>
+              <span class="food-tag danger">전 기간 금지</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="생고기 육회 타르타르">
+            <div class="food-emoji">🥩</div>
+            <div class="food-info">
+              <div class="food-name">생고기 / 육회</div>
+              <div class="food-reason">톡소플라스마, 리스테리아, 살모넬라 등 기생충 및 세균 감염 위험이 높습니다. 고기는 반드시 완전히 익혀서 드세요.</div>
+              <span class="food-tag danger">식중독 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="생선회 회 날생선 초밥 스시 사시미">
+            <div class="food-emoji">🍣</div>
+            <div class="food-info">
+              <div class="food-name">날생선 / 회 / 초밥</div>
+              <div class="food-reason">리스테리아, 기생충 감염 및 수은 중독 위험이 있습니다. 생연어, 참치회, 광어회 등 모든 날생선을 포함합니다.</div>
+              <span class="food-tag danger">기생충·수은 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="생굴 생조개 생새우 날 해산물">
+            <div class="food-emoji">🦪</div>
+            <div class="food-info">
+              <div class="food-name">생 해산물 (굴, 조개, 새우 등)</div>
+              <div class="food-reason">노로바이러스, 비브리오 등 식중독 위험이 매우 높습니다. 해산물은 반드시 완전히 익혀 드세요.</div>
+              <span class="food-tag danger">식중독 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="생달걀 날달걀 날계란 수란 반숙 마요네즈">
+            <div class="food-emoji">🥚</div>
+            <div class="food-info">
+              <div class="food-name">생달걀 / 반숙란</div>
+              <div class="food-reason">살모넬라균 감염 위험이 있습니다. 달걀은 흰자와 노른자가 완전히 익을 때까지 조리하세요. 수제 마요네즈, 홀란다이즈 소스도 주의하세요.</div>
+              <span class="food-tag danger">살모넬라 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="살균되지 않은 우유 생유 비살균 치즈 소프트 치즈 브리 카망베르">
+            <div class="food-emoji">🧀</div>
+            <div class="food-info">
+              <div class="food-name">비살균 유제품 / 소프트 치즈</div>
+              <div class="food-reason">리스테리아균 감염 위험이 높습니다. 브리, 카망베르, 블루치즈 등 곰팡이 숙성 소프트 치즈와 비살균 우유를 피하세요.</div>
+              <span class="food-tag danger">리스테리아 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="상어 황새치 왕고등어 옥돔 대형 참치 수은">
+            <div class="food-emoji">🦈</div>
+            <div class="food-info">
+              <div class="food-name">수은 함량 높은 생선</div>
+              <div class="food-reason">상어, 황새치(소드피시), 왕고등어, 옥돔 등은 수은 함량이 매우 높아 태아 신경 발달에 악영향을 줍니다.</div>
+              <span class="food-tag danger">수은 중독 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="쑥 익모초 홍화 한약재">
+            <div class="food-emoji">🌿</div>
+            <div class="food-info">
+              <div class="food-name">쑥 / 익모초 / 홍화</div>
+              <div class="food-reason">자궁 수축을 유발할 수 있어 유산·조산의 위험이 있습니다. 쑥떡, 쑥 음료도 포함됩니다. 한약재는 반드시 전문의와 상의하세요.</div>
+              <span class="food-tag danger">자궁수축 유발</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="율무 율무차">
+            <div class="food-emoji">🌾</div>
+            <div class="food-info">
+              <div class="food-name">율무 / 율무차</div>
+              <div class="food-reason">자궁 수축을 촉진시킬 수 있습니다. 한의학적으로 임산부에게 금기시되는 식재료입니다.</div>
+              <span class="food-tag danger">자궁수축 유발</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 제한 -->
+      <div class="severity-group" data-severity="warning">
+        <div class="severity-title warning">⚠️ 줄여야 하는 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="커피 카페인 에스프레소 아메리카노 라떼">
+            <div class="food-emoji">☕</div>
+            <div class="food-info">
+              <div class="food-name">커피 / 카페인 음료</div>
+              <div class="food-reason">하루 200mg 이하(아메리카노 1~2잔)로 제한하세요. 과다 섭취 시 저체중아 출산, 유산 위험이 증가합니다. 녹차, 초콜릿의 카페인도 합산하세요.</div>
+              <span class="food-tag warning">하루 200mg 이하</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="참치 캔 참치 통조림 참치">
+            <div class="food-emoji">🐟</div>
+            <div class="food-info">
+              <div class="food-name">참치 통조림</div>
+              <div class="food-reason">수은이 포함되어 있어 주 2회(약 170g) 이하로 제한하세요. 날것이 아닌 캔 참치는 수은 함량이 비교적 낮지만 과다 섭취를 피하세요.</div>
+              <span class="food-tag warning">주 2회 이하</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="인스턴트 라면 컵라면 가공식품 즉석식품 냉동식품">
+            <div class="food-emoji">🍜</div>
+            <div class="food-info">
+              <div class="food-name">인스턴트 / 가공식품</div>
+              <div class="food-reason">나트륨, 방부제, 인공첨가물이 많아 부종과 고혈압 위험을 높입니다. 영양소가 부족하므로 가능한 자연식품으로 대체하세요.</div>
+              <span class="food-tag warning">나트륨·첨가물 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="짠 음식 소금 간장 된장 젓갈 짠 반찬">
+            <div class="food-emoji">🧂</div>
+            <div class="food-info">
+              <div class="food-name">과도한 나트륨 (짠 음식)</div>
+              <div class="food-reason">임신 중 고혈압과 부종을 유발할 수 있습니다. 젓갈, 장아찌, 짠 반찬류의 섭취를 줄이고, 국물도 싱겁게 드세요.</div>
+              <span class="food-tag warning">부종·고혈압 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="설탕 단 음식 달달한 과자 케이크 사탕 디저트">
+            <div class="food-emoji">🍰</div>
+            <div class="food-info">
+              <div class="food-name">고당류 식품 (과자, 케이크 등)</div>
+              <div class="food-reason">임신성 당뇨 위험을 높입니다. 급격한 혈당 변화는 태아에게도 영향을 줍니다. 과일로 단맛을 대체해 보세요.</div>
+              <span class="food-tag warning">임신성 당뇨 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="비타민A 레티놀 간 동물간 닭간 돼지간 소간">
+            <div class="food-emoji">🫀</div>
+            <div class="food-info">
+              <div class="food-name">동물 간 (소간, 돼지간 등)</div>
+              <div class="food-reason">비타민A(레티놀)가 매우 많아 과다 섭취 시 태아 기형 위험이 있습니다. 소량 섭취하거나 피하세요. 비타민A 보충제도 함께 주의하세요.</div>
+              <span class="food-tag warning">비타민A 과다 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="탄산음료 콜라 사이다 에너지드링크">
+            <div class="food-emoji">🥤</div>
+            <div class="food-info">
+              <div class="food-name">탄산음료 / 에너지드링크</div>
+              <div class="food-reason">높은 당분, 카페인, 인공감미료가 포함되어 있습니다. 에너지드링크는 카페인 함량이 특히 높으니 피하세요.</div>
+              <span class="food-tag warning">카페인·당분 과다</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주의 -->
+      <div class="severity-group" data-severity="caution">
+        <div class="severity-title caution">💡 주의하며 먹을 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="매운 음식 매운 것 고추 청양고추 떡볶이 불닭">
+            <div class="food-emoji">🌶️</div>
+            <div class="food-info">
+              <div class="food-name">매운 음식</div>
+              <div class="food-reason">직접적으로 태아에 해로운 것은 아니나, 위장 장애, 속쓰림, 소화불량을 유발할 수 있습니다. 본인 컨디션에 맞게 조절하세요.</div>
+              <span class="food-tag caution">소화불량 가능</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="녹차 홍차 마테차 차 카페인 티">
+            <div class="food-emoji">🍵</div>
+            <div class="food-info">
+              <div class="food-name">녹차 / 홍차 / 마테차</div>
+              <div class="food-reason">카페인이 포함되어 있으며, 철분 흡수를 방해합니다. 식후 30분 이상 지나서 마시고, 하루 1~2잔 이하로 드세요.</div>
+              <span class="food-tag caution">철분 흡수 방해</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="파인애플 파파야">
+            <div class="food-emoji">🍍</div>
+            <div class="food-info">
+              <div class="food-name">파인애플 / 파파야 (미숙과)</div>
+              <div class="food-reason">파인애플의 브로멜린 성분이 자궁경부를 부드럽게 할 수 있다는 의견이 있습니다. 일반적인 양은 괜찮지만 과다 섭취는 피하세요. 미숙 파파야는 라텍스 성분이 자궁수축을 유발할 수 있습니다.</div>
+              <span class="food-tag caution">과다 섭취 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="복숭아 알레르기">
+            <div class="food-emoji">🍑</div>
+            <div class="food-info">
+              <div class="food-name">복숭아</div>
+              <div class="food-reason">임신 중 알레르기 반응이 평소보다 강하게 나타날 수 있습니다. 체질에 맞게 소량부터 드세요. 복숭아 자체는 영양가가 높은 과일입니다.</div>
+              <span class="food-tag caution">알레르기 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="인삼 홍삼 보양식">
+            <div class="food-emoji">🫚</div>
+            <div class="food-info">
+              <div class="food-name">인삼 / 홍삼</div>
+              <div class="food-reason">혈압 변화를 일으킬 수 있고, 체질에 따라 부작용이 있을 수 있습니다. 담당 의료진과 상의 후 섭취하세요.</div>
+              <span class="food-tag caution">의료진 상담 필요</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="훈제 연어 훈제 생선 핫도그 소시지 델리미트 햄">
+            <div class="food-emoji">🌭</div>
+            <div class="food-info">
+              <div class="food-name">훈제 생선 / 가공육 (햄, 소시지)</div>
+              <div class="food-reason">리스테리아 오염 가능성이 있습니다. 먹기 전에 반드시 뜨겁게 재가열하세요. 아질산나트륨 등 보존료도 주의하세요.</div>
+              <span class="food-tag caution">재가열 필수</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="과일 과다 포도 수박 당">
+            <div class="food-emoji">🍇</div>
+            <div class="food-info">
+              <div class="food-name">과일 과다 섭취</div>
+              <div class="food-reason">과일은 좋지만 당분이 높으므로 하루 2~3회 정도로 제한하세요. 특히 포도, 수박, 망고 등 고당 과일은 주의가 필요합니다.</div>
+              <span class="food-tag caution">과당 섭취 조절</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <h3>💝 전체 기간 식사 팁</h3>
+        <ul class="tip-list">
+          <li>식재료는 항상 신선한 것으로 선택하고, 조리 전 깨끗이 씻으세요</li>
+          <li>고기와 해산물은 내부 온도 75°C 이상으로 완전히 익혀 드세요</li>
+          <li>조리된 음식은 2시간 이내에 냉장 보관하세요</li>
+          <li>외식 시 위생 상태가 좋은 곳을 선택하세요</li>
+          <li>영양 보충제는 반드시 담당 의사와 상의 후 복용하세요</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 초기 1~12주 ===== -->
+    <section class="trimester-section" id="trimester1" role="tabpanel">
+      <div class="section-header">
+        <h2>🌱 임신 초기 <span class="week-badge">1~12주</span></h2>
+        <p>배아가 형성되는 가장 중요한 시기입니다. 장기가 만들어지므로 특히 주의가 필요합니다.</p>
+      </div>
+
+      <div class="common-banner">
+        <h3>🌱 초기 핵심 포인트</h3>
+        <p>태아의 주요 장기(뇌, 심장, 척수)가 형성되는 시기입니다. 엽산 섭취가 매우 중요하며, 기형 유발 물질에 특히 민감한 시기이므로 음식에 각별한 주의가 필요합니다.</p>
+      </div>
+
+      <!-- 금지 -->
+      <div class="severity-group" data-severity="danger">
+        <div class="severity-title danger">🚫 초기에 특히 금지</div>
+        <div class="food-list">
+          <div class="food-item" data-name="비타민A 보충제 레티놀 과다 영양제">
+            <div class="food-emoji">💊</div>
+            <div class="food-info">
+              <div class="food-name">비타민A 과다 보충제</div>
+              <div class="food-reason">초기에 비타민A(레티놀)를 과다 섭취하면 태아 기형 위험이 높아집니다. 일일 권장량(770μg)을 초과하지 마세요. 베타카로틴 형태는 안전합니다.</div>
+              <span class="food-tag danger">태아 기형 위험</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="약 약물 이부프로펜 아스피린 진통제">
+            <div class="food-emoji">💊</div>
+            <div class="food-info">
+              <div class="food-name">일반 진통제 (이부프로펜 등)</div>
+              <div class="food-reason">NSAIDs 계열 진통제는 초기 유산 위험을 높일 수 있습니다. 통증이 있을 때는 반드시 의사 처방을 받으세요. 아세트아미노펜(타이레놀)은 의사 상담 후 사용 가능합니다.</div>
+              <span class="food-tag danger">의사 처방 필수</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 제한 -->
+      <div class="severity-group" data-severity="warning">
+        <div class="severity-title warning">⚠️ 초기에 줄여야 하는 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="카페인 커피 초기">
+            <div class="food-emoji">☕</div>
+            <div class="food-info">
+              <div class="food-name">카페인 (가능하면 최소화)</div>
+              <div class="food-reason">초기에는 유산 위험이 높은 시기이므로 카페인을 하루 100mg 이하로 더 엄격하게 제한하는 것이 좋습니다. 가능하면 디카페인으로 대체하세요.</div>
+              <span class="food-tag warning">100mg 이하 권장</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="기름진 음식 튀김 프라이 기름 느끼한">
+            <div class="food-emoji">🍳</div>
+            <div class="food-info">
+              <div class="food-name">기름진 / 튀긴 음식</div>
+              <div class="food-reason">입덧을 악화시킬 수 있습니다. 소화가 어려운 음식은 줄이고, 담백하고 소화가 잘 되는 음식을 선택하세요.</div>
+              <span class="food-tag warning">입덧 악화 가능</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="감초 감초차 리코리스">
+            <div class="food-emoji">🫖</div>
+            <div class="food-info">
+              <div class="food-name">감초 / 감초차</div>
+              <div class="food-reason">글리시리진 성분이 태반을 통과하여 태아의 인지 발달에 영향을 줄 수 있습니다. 초기부터 줄이는 것이 좋습니다.</div>
+              <span class="food-tag warning">태아 발달 영향</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주의 -->
+      <div class="severity-group" data-severity="caution">
+        <div class="severity-title caution">💡 초기에 주의할 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="찬 음식 아이스크림 빙수 찬물 차가운">
+            <div class="food-emoji">🍦</div>
+            <div class="food-info">
+              <div class="food-name">차가운 음식</div>
+              <div class="food-reason">지나치게 차가운 음식은 소화 기능을 저하시키고 입덧을 유발할 수 있습니다. 상온이나 따뜻한 음식을 권장합니다.</div>
+              <span class="food-tag caution">소화불량 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="새싹채소 새싹 무순 콩나물 알팔파 스프라우트">
+            <div class="food-emoji">🌱</div>
+            <div class="food-info">
+              <div class="food-name">생 새싹채소 (알팔파, 무순 등)</div>
+              <div class="food-reason">새싹채소는 재배 환경 특성상 세균 번식이 쉽습니다. 반드시 익혀서 드시거나, 철저히 세척 후 드세요.</div>
+              <span class="food-tag caution">세균 오염 가능</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="향신료 계피 시나몬 로즈마리 허브">
+            <div class="food-emoji">🫙</div>
+            <div class="food-info">
+              <div class="food-name">특정 향신료 (계피, 로즈마리)</div>
+              <div class="food-reason">대량 섭취 시 자궁 수축을 유발할 수 있다는 보고가 있습니다. 요리에 소량 사용하는 정도는 괜찮지만 건강보조식품 형태의 고농축 섭취는 피하세요.</div>
+              <span class="food-tag caution">대량 섭취 금지</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <h3>💝 초기 식사 팁</h3>
+        <ul class="tip-list">
+          <li>엽산이 풍부한 음식(시금치, 브로콜리, 아보카도)을 충분히 섭취하세요</li>
+          <li>입덧이 심할 때는 소량씩 자주 먹는 것이 좋습니다</li>
+          <li>크래커, 토스트 등 담백한 간식을 곁에 두세요</li>
+          <li>생강차는 입덧 완화에 도움이 될 수 있습니다</li>
+          <li>수분 섭취를 충분히 하되, 한꺼번에 많이 마시지 마세요</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 중기 13~27주 ===== -->
+    <section class="trimester-section" id="trimester2" role="tabpanel">
+      <div class="section-header">
+        <h2>🌿 임신 중기 <span class="week-badge">13~27주</span></h2>
+        <p>태아가 빠르게 성장하는 시기입니다. 영양 균형과 체중 관리에 신경 쓰세요.</p>
+      </div>
+
+      <div class="common-banner">
+        <h3>🌿 중기 핵심 포인트</h3>
+        <p>태아의 뼈와 근육이 발달하고, 체중이 빠르게 증가합니다. 칼슘, 철분, DHA의 충분한 섭취가 중요하며, 임신성 당뇨 검사를 받는 시기이므로 당분 섭취에 특히 주의하세요.</p>
+      </div>
+
+      <!-- 금지 -->
+      <div class="severity-group" data-severity="danger">
+        <div class="severity-title danger">🚫 중기에도 계속 금지</div>
+        <div class="food-list">
+          <div class="food-item" data-name="생고기 생선회 술 알코올 중기">
+            <div class="food-emoji">🚫</div>
+            <div class="food-info">
+              <div class="food-name">전체 기간 금지 음식 모두 해당</div>
+              <div class="food-reason">술, 생고기, 날생선, 생해산물, 비살균 유제품, 수은 높은 생선 등 전체 기간 금지 음식은 중기에도 동일하게 적용됩니다.</div>
+              <span class="food-tag danger">전체기간 금지 참고</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 제한 -->
+      <div class="severity-group" data-severity="warning">
+        <div class="severity-title warning">⚠️ 중기에 줄여야 하는 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="당분 설탕 과당 임신성 당뇨 과자 빵 디저트">
+            <div class="food-emoji">🍬</div>
+            <div class="food-info">
+              <div class="food-name">고당분 식품</div>
+              <div class="food-reason">임신성 당뇨 검사(24~28주)를 앞두고 있습니다. 흰 빵, 과자, 사탕, 단 음료 등 혈당을 급격히 올리는 식품을 줄이세요. 통곡물, 잡곡밥으로 대체하세요.</div>
+              <span class="food-tag warning">임신성 당뇨 예방</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="백미 흰쌀밥 흰빵 정제 탄수화물">
+            <div class="food-emoji">🍚</div>
+            <div class="food-info">
+              <div class="food-name">정제 탄수화물 (흰쌀, 흰밀가루)</div>
+              <div class="food-reason">혈당 지수(GI)가 높아 혈당을 급격히 올립니다. 현미, 잡곡, 통밀빵으로 대체하면 혈당 관리에 도움이 됩니다.</div>
+              <span class="food-tag warning">혈당 관리 필요</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="과도한 과일 주스 과즙 오렌지주스">
+            <div class="food-emoji">🧃</div>
+            <div class="food-info">
+              <div class="food-name">과일 주스 / 가당 음료</div>
+              <div class="food-reason">과일 주스는 섬유질 없이 당분만 농축되어 있어 혈당을 빠르게 올립니다. 과일은 주스 대신 통째로 드세요.</div>
+              <span class="food-tag warning">혈당 급등 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="짠 음식 나트륨 부종 중기">
+            <div class="food-emoji">🧂</div>
+            <div class="food-info">
+              <div class="food-name">짠 음식 (부종 관리)</div>
+              <div class="food-reason">중기부터 부종이 시작될 수 있습니다. 나트륨 섭취를 하루 2,000mg 이하로 줄이고, 칼륨이 풍부한 바나나, 고구마를 함께 드세요.</div>
+              <span class="food-tag warning">부종 예방</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주의 -->
+      <div class="severity-group" data-severity="caution">
+        <div class="severity-title caution">💡 중기에 주의할 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="우유 유제품 칼슘 가스 복부팽만">
+            <div class="food-emoji">🥛</div>
+            <div class="food-info">
+              <div class="food-name">유제품 과다 섭취</div>
+              <div class="food-reason">칼슘 보충을 위해 유제품을 많이 드시되, 유당불내증이 있다면 가스와 복부 팽만이 생길 수 있습니다. 요거트나 치즈로 대체하는 것도 좋습니다.</div>
+              <span class="food-tag caution">체질에 맞게 조절</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="콩 두부 이소플라본 된장 두유">
+            <div class="food-emoji">🫘</div>
+            <div class="food-info">
+              <div class="food-name">콩제품 과다 섭취</div>
+              <div class="food-reason">콩 제품은 좋은 단백질 공급원이지만, 이소플라본이 에스트로겐과 유사하게 작용합니다. 적정량(하루 두부 1/2모 정도)을 유지하세요.</div>
+              <span class="food-tag caution">적정량 섭취</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="떡 찹쌀떡 송편 과식 간식">
+            <div class="food-emoji">🍡</div>
+            <div class="food-info">
+              <div class="food-name">떡 / 찹쌀 제품</div>
+              <div class="food-reason">혈당 지수가 높고 소화가 느려 위장 부담이 될 수 있습니다. 간식으로 소량만 드시고, 견과류나 요거트로 대체해 보세요.</div>
+              <span class="food-tag caution">혈당·소화 주의</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <h3>💝 중기 식사 팁</h3>
+        <ul class="tip-list">
+          <li>철분이 풍부한 음식(소고기, 시금치, 두부)을 충분히 드세요</li>
+          <li>칼슘 흡수를 위해 비타민D도 함께 섭취하세요 (햇볕 쬐기)</li>
+          <li>DHA가 풍부한 저수은 생선(고등어, 연어)을 주 2~3회 익혀 드세요</li>
+          <li>식사를 규칙적으로 하고, 폭식을 피하세요</li>
+          <li>변비 예방을 위해 식이섬유와 수분을 충분히 섭취하세요</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 후기 28~40주 ===== -->
+    <section class="trimester-section" id="trimester3" role="tabpanel">
+      <div class="section-header">
+        <h2>🌸 임신 후기 <span class="week-badge">28~40주</span></h2>
+        <p>출산을 준비하는 시기입니다. 체중 관리와 부종 관리에 더욱 신경 쓰세요.</p>
+      </div>
+
+      <div class="common-banner">
+        <h3>🌸 후기 핵심 포인트</h3>
+        <p>태아의 뇌 발달이 활발하고, 체중이 가장 많이 증가하는 시기입니다. 소화 기능이 저하되고 부종이 심해질 수 있으므로 식사량과 나트륨 섭취에 주의하세요. 조산 예방을 위한 식이 관리도 중요합니다.</p>
+      </div>
+
+      <!-- 금지 -->
+      <div class="severity-group" data-severity="danger">
+        <div class="severity-title danger">🚫 후기에 특히 금지</div>
+        <div class="food-list">
+          <div class="food-item" data-name="술 알코올 후기">
+            <div class="food-emoji">🚫</div>
+            <div class="food-info">
+              <div class="food-name">전체 기간 금지 음식 모두 해당</div>
+              <div class="food-reason">전체 기간 금지 음식은 후기에도 동일하게 적용됩니다. 출산이 다가올수록 더욱 주의하세요.</div>
+              <span class="food-tag danger">전체기간 금지 참고</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="생강 과다 자궁수축 진통">
+            <div class="food-emoji">🫚</div>
+            <div class="food-info">
+              <div class="food-name">생강 과다 섭취</div>
+              <div class="food-reason">소량의 생강은 괜찮지만, 후기에 과다 섭취 시 출혈 위험과 자궁 수축을 유발할 수 있습니다. 생강차 1잔 이하로 제한하세요.</div>
+              <span class="food-tag danger">출혈 위험</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 제한 -->
+      <div class="severity-group" data-severity="warning">
+        <div class="severity-title warning">⚠️ 후기에 줄여야 하는 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="짠 음식 부종 나트륨 후기 고혈압 임신중독증">
+            <div class="food-emoji">🧂</div>
+            <div class="food-info">
+              <div class="food-name">고나트륨 식품 (더욱 엄격하게)</div>
+              <div class="food-reason">후기에는 부종과 임신중독증(전자간증) 위험이 높아집니다. 나트륨 섭취를 하루 1,500mg 이하로 엄격히 제한하세요. 국물, 젓갈, 가공식품을 특히 줄이세요.</div>
+              <span class="food-tag warning">임신중독증 예방</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="과식 많이 먹기 대량 섭취 소화">
+            <div class="food-emoji">🍽️</div>
+            <div class="food-info">
+              <div class="food-name">한 번에 많이 먹기 (과식)</div>
+              <div class="food-reason">커진 자궁이 위를 압박하여 소화 장애, 위산 역류가 발생합니다. 한 번에 많이 먹기보다 하루 5~6회로 나누어 소량씩 드세요.</div>
+              <span class="food-tag warning">소화불량·역류 방지</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="고칼로리 과체중 체중관리 패스트푸드 후기">
+            <div class="food-emoji">🍔</div>
+            <div class="food-info">
+              <div class="food-name">고칼로리 / 패스트푸드</div>
+              <div class="food-reason">후기 과도한 체중 증가는 임신성 당뇨, 거대아 출산, 난산의 위험을 높입니다. 영양 밀도가 높은 음식을 선택하세요.</div>
+              <span class="food-tag warning">과체중 주의</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="가스 발생 양배추 브로콜리 콩류 가스찬 복부팽만">
+            <div class="food-emoji">🥦</div>
+            <div class="food-info">
+              <div class="food-name">가스 유발 식품 (과다 시)</div>
+              <div class="food-reason">양배추, 브로콜리, 콩류 등은 영양가가 높지만 가스를 유발해 후기에 복부 팽만감을 악화시킬 수 있습니다. 적당량 드시고, 불편하면 줄이세요.</div>
+              <span class="food-tag warning">복부팽만 가능</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주의 -->
+      <div class="severity-group" data-severity="caution">
+        <div class="severity-title caution">💡 후기에 주의할 음식</div>
+        <div class="food-list">
+          <div class="food-item" data-name="수분 물 음료 화장실 빈뇨">
+            <div class="food-emoji">💧</div>
+            <div class="food-info">
+              <div class="food-name">취침 전 과도한 수분 섭취</div>
+              <div class="food-reason">후기에는 빈뇨가 심해집니다. 잠자기 2시간 전부터는 수분 섭취를 줄이세요. 단, 낮에는 충분히 수분을 보충하세요.</div>
+              <span class="food-tag caution">수면의 질 관리</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="배달 음식 외식 위생">
+            <div class="food-emoji">📦</div>
+            <div class="food-info">
+              <div class="food-name">배달 음식</div>
+              <div class="food-reason">조리 후 배달까지 시간이 걸려 세균 번식 위험이 있습니다. 배달 음식은 도착 즉시 재가열하여 드세요. 위생 상태를 확인하기 어렵다는 점도 고려하세요.</div>
+              <span class="food-tag caution">재가열 권장</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="보양식 삼계탕 곰탕 갈비탕 사골 고칼로리">
+            <div class="food-emoji">🍲</div>
+            <div class="food-info">
+              <div class="food-name">고칼로리 보양식</div>
+              <div class="food-reason">삼계탕, 곰탕 등은 영양가가 높지만 칼로리도 높습니다. 후기에는 체중 관리가 중요하므로 기름기를 제거하고 적당량만 드세요.</div>
+              <span class="food-tag caution">칼로리 조절</span>
+            </div>
+          </div>
+          <div class="food-item" data-name="야식 밤참 늦은 식사 수면">
+            <div class="food-emoji">🌙</div>
+            <div class="food-info">
+              <div class="food-name">야식 / 늦은 시간 식사</div>
+              <div class="food-reason">위산 역류와 소화불량을 악화시킵니다. 저녁 식사 후 3시간 이내에는 눕지 말고, 야식이 필요하면 요거트, 과일 등 가벼운 것으로 드세요.</div>
+              <span class="food-tag caution">위산 역류 주의</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <h3>💝 후기 식사 팁</h3>
+        <ul class="tip-list">
+          <li>하루 5~6회 소량씩 나누어 먹으면 소화에 도움이 됩니다</li>
+          <li>철분제는 변비를 유발할 수 있으니 식이섬유를 함께 드세요</li>
+          <li>분만 준비를 위해 단백질을 충분히 섭취하세요</li>
+          <li>부종이 심하면 다리를 높이 올리고, 칼륨이 풍부한 음식을 드세요</li>
+          <li>출산 예정일이 다가오면 소화가 잘 되는 음식 위주로 드세요</li>
+          <li>라즈베리 잎 차는 36주 이후 의사 상담 후 시도할 수 있습니다</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="disclaimer">
+      <p>⚕️ 이 가이드는 일반적인 정보를 제공하기 위한 것이며, 의학적 조언을 대체하지 않습니다.<br>개인별 상황이 다를 수 있으므로 반드시 담당 산부인과 전문의와 상담하세요.</p>
+    </div>
+    <p>마지막 업데이트: 2025년 6월 · 참고: WHO, 대한산부인과학회, FDA 권고사항</p>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="맨 위로 스크롤">↑</button>
+
+  <script>
+    // ===== TAB NAVIGATION =====
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.trimester-section');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.dataset.tab;
+
+        // Update active tab
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show corresponding section
+        sections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === targetTab) {
+            section.classList.add('active');
+          }
+        });
+
+        // Clear search
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput.value) {
+          searchInput.value = '';
+          clearSearch();
+        }
+
+        // Scroll to content area smoothly
+        document.querySelector('.content-area').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+    // ===== SEARCH FUNCTIONALITY =====
+    const searchInput = document.getElementById('searchInput');
+    const searchCount = document.getElementById('searchCount');
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+
+      if (!query) {
+        clearSearch();
+        return;
+      }
+
+      let totalFound = 0;
+      const activeSection = document.querySelector('.trimester-section.active');
+
+      activeSection.querySelectorAll('.severity-group').forEach(group => {
+        let groupHasVisible = false;
+
+        group.querySelectorAll('.food-item').forEach(item => {
+          const name = item.dataset.name?.toLowerCase() || '';
+          const displayName = item.querySelector('.food-name')?.textContent.toLowerCase() || '';
+          const reason = item.querySelector('.food-reason')?.textContent.toLowerCase() || '';
+
+          if (name.includes(query) || displayName.includes(query) || reason.includes(query)) {
+            item.classList.remove('hidden');
+            item.classList.add('highlight');
+            groupHasVisible = true;
+            totalFound++;
+          } else {
+            item.classList.add('hidden');
+            item.classList.remove('highlight');
+          }
+        });
+
+        if (groupHasVisible) {
+          group.classList.remove('hidden');
+        } else {
+          group.classList.add('hidden');
+        }
+      });
+
+      searchCount.textContent = `"${e.target.value}" 검색 결과: ${totalFound}개`;
+      searchCount.classList.add('visible');
+    });
+
+    function clearSearch() {
+      document.querySelectorAll('.food-item').forEach(item => {
+        item.classList.remove('hidden', 'highlight');
+      });
+      document.querySelectorAll('.severity-group').forEach(group => {
+        group.classList.remove('hidden');
+      });
+      searchCount.classList.remove('visible');
+    }
+
+    // ===== BACK TO TOP =====
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== SMOOTH ENTRANCE ANIMATION =====
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.severity-group, .tip-card, .common-banner').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

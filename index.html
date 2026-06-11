@@ -54,14 +54,24 @@
     .hero p{color:var(--text-secondary);font-size:.9rem;font-weight:300}
 
     /* ===== MAIN TABS ===== */
-    .main-tab-nav{position:sticky;top:0;z-index:200;background:rgba(15,15,26,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 12px}
-    .main-tab-list{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;max-width:900px;margin:0 auto;padding:8px 0}
+    .main-tab-nav{position:sticky;top:0;z-index:200;background:rgba(15,15,26,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06);padding:0}
+    .main-tab-wrap{position:relative;max-width:900px;margin:0 auto;padding:0 12px}
+    .main-tab-list{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:8px 0}
     .main-tab-list::-webkit-scrollbar{display:none}
     .main-tab-btn{flex-shrink:0;padding:10px 16px;border:none;border-radius:var(--radius-md) var(--radius-md) 0 0;background:transparent;color:var(--text-muted);font-family:'Noto Sans KR',sans-serif;font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s;white-space:nowrap;position:relative;display:flex;align-items:center;gap:5px}
     .main-tab-btn:hover{color:var(--text-secondary);background:rgba(255,255,255,.03)}
     .main-tab-btn.active{color:#fff;background:rgba(102,126,234,.15)}
     .main-tab-btn.active::after{content:'';position:absolute;bottom:0;left:12px;right:12px;height:2px;background:var(--gradient-hero);border-radius:2px 2px 0 0}
     .main-tab-btn .tab-emoji{font-size:1rem}
+
+    /* Tab scroll indicators */
+    .tab-fade-right,.tab-fade-left{position:absolute;top:0;bottom:0;width:48px;pointer-events:none;z-index:10;transition:opacity .3s}
+    .tab-fade-right{right:0;background:linear-gradient(to left,rgba(15,15,26,.95) 0%,rgba(15,15,26,.6) 40%,transparent 100%)}
+    .tab-fade-left{left:0;background:linear-gradient(to right,rgba(15,15,26,.95) 0%,rgba(15,15,26,.6) 40%,transparent 100%)}
+    .tab-fade-right.hidden,.tab-fade-left.hidden{opacity:0}
+    .tab-scroll-hint{position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:.75rem;color:rgba(255,255,255,.6);animation:hintPulse 1.5s ease-in-out infinite;pointer-events:none;z-index:11}
+    .tab-scroll-hint.hidden{opacity:0}
+    @keyframes hintPulse{0%,100%{transform:translateY(-50%) translateX(0);opacity:.6}50%{transform:translateY(-50%) translateX(4px);opacity:1}}
 
     /* ===== CONTENT WRAPPER ===== */
     .main-section{display:none;animation:fadeIn .4s ease;max-width:800px;margin:0 auto;padding:24px 20px 80px}
@@ -284,14 +294,19 @@
 
 <!-- ===== MAIN TAB NAV ===== -->
 <nav class="main-tab-nav">
-  <div class="main-tab-list" role="tablist">
-    <button class="main-tab-btn active" data-main="food"><span class="tab-emoji">🍽️</span> 음식</button>
-    <button class="main-tab-btn" data-main="checklist"><span class="tab-emoji">✅</span> 할 일</button>
-    <button class="main-tab-btn" data-main="lifestyle"><span class="tab-emoji">⚠️</span> 생활주의</button>
-    <button class="main-tab-btn" data-main="supplement"><span class="tab-emoji">💊</span> 영양제</button>
-    <button class="main-tab-btn" data-main="tests"><span class="tab-emoji">🏥</span> 검사</button>
-    <button class="main-tab-btn" data-main="benefits"><span class="tab-emoji">💰</span> 혜택</button>
-    <button class="main-tab-btn" data-main="fetal"><span class="tab-emoji">👶</span> 태아발달</button>
+  <div class="main-tab-wrap">
+    <div class="main-tab-list" role="tablist" id="mainTabList">
+      <button class="main-tab-btn active" data-main="food"><span class="tab-emoji">🍽️</span> 음식</button>
+      <button class="main-tab-btn" data-main="checklist"><span class="tab-emoji">✅</span> 할 일</button>
+      <button class="main-tab-btn" data-main="lifestyle"><span class="tab-emoji">⚠️</span> 생활주의</button>
+      <button class="main-tab-btn" data-main="supplement"><span class="tab-emoji">💊</span> 영양제</button>
+      <button class="main-tab-btn" data-main="tests"><span class="tab-emoji">🏥</span> 검사</button>
+      <button class="main-tab-btn" data-main="benefits"><span class="tab-emoji">💰</span> 혜택</button>
+      <button class="main-tab-btn" data-main="fetal"><span class="tab-emoji">👶</span> 태아발달</button>
+    </div>
+    <div class="tab-fade-left hidden" id="tabFadeL"></div>
+    <div class="tab-fade-right" id="tabFadeR"></div>
+    <div class="tab-scroll-hint" id="tabHint">›</div>
   </div>
 </nav>
 
@@ -966,6 +981,28 @@ function clearSearch() {
   document.querySelectorAll('.severity-group').forEach(g => g.classList.remove('hidden'));
   searchCount.classList.remove('visible');
 }
+
+// ===== TAB SCROLL INDICATORS =====
+const tabList = document.getElementById('mainTabList');
+const tabFadeR = document.getElementById('tabFadeR');
+const tabFadeL = document.getElementById('tabFadeL');
+const tabHint = document.getElementById('tabHint');
+
+function updateTabScrollHints() {
+  const sl = tabList.scrollLeft;
+  const maxScroll = tabList.scrollWidth - tabList.clientWidth;
+  // Right fade: show when more content to right
+  const hasRight = sl < maxScroll - 2;
+  tabFadeR.classList.toggle('hidden', !hasRight);
+  tabHint.classList.toggle('hidden', !hasRight);
+  // Left fade: show when scrolled from start
+  tabFadeL.classList.toggle('hidden', sl < 4);
+}
+
+tabList.addEventListener('scroll', updateTabScrollHints, { passive: true });
+window.addEventListener('resize', updateTabScrollHints);
+// Initial check
+setTimeout(updateTabScrollHints, 100);
 
 // ===== BACK TO TOP =====
 const btt = document.getElementById('backToTop');
