@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>임신 종합 가이드 2026 🤰</title>
+  <meta name="description" content="임신 중 음식, 생활 주의사항, 영양제, 검사 일정, 혜택·지원금, 태아 발달까지 한 곳에서 확인하는 종합 가이드">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f0f1a;
+      --bg-secondary: #1a1a2e;
+      --bg-card: #16213e;
+      --bg-card-hover: #1a2745;
+      --text-primary: #e8e8f0;
+      --text-secondary: #a0a0b8;
+      --text-muted: #6b6b80;
+      --accent-danger: #ff4757;
+      --accent-danger-bg: rgba(255,71,87,.08);
+      --accent-danger-border: rgba(255,71,87,.25);
+      --accent-warning: #ffa502;
+      --accent-warning-bg: rgba(255,165,2,.08);
+      --accent-warning-border: rgba(255,165,2,.25);
+      --accent-caution: #2ed573;
+      --accent-caution-bg: rgba(46,213,115,.08);
+      --accent-caution-border: rgba(46,213,115,.25);
+      --accent-info: #70a1ff;
+      --accent-info-bg: rgba(112,161,255,.08);
+      --accent-pink: #ff6b9d;
+      --accent-purple: #a855f7;
+      --gradient-hero: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      --gradient-pink: linear-gradient(135deg,#f093fb 0%,#f5576c 100%);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-card: 0 4px 24px rgba(0,0,0,.3);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    /* ===== HERO ===== */
+    .hero{position:relative;padding:60px 20px 32px;text-align:center;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 50%,rgba(102,126,234,.12) 0%,transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(168,85,247,.08) 0%,transparent 50%);animation:heroFloat 20s ease-in-out infinite}
+    @keyframes heroFloat{0%,100%{transform:translate(0,0)}33%{transform:translate(30px,-20px)}66%{transform:translate(-20px,15px)}}
+    .hero-content{position:relative;z-index:1;max-width:700px;margin:0 auto}
+    .hero-emoji{font-size:3.5rem;margin-bottom:10px;animation:bounce 3s ease-in-out infinite;display:inline-block}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .hero h1{font-size:1.9rem;font-weight:800;background:linear-gradient(135deg,#e8e8f0 0%,#ff6b9d 50%,#a855f7 100%);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 4s ease-in-out infinite;margin-bottom:8px;letter-spacing:-.5px}
+    @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+    .hero p{color:var(--text-secondary);font-size:.9rem;font-weight:300}
+
+    /* ===== MAIN TABS ===== */
+    .main-tab-nav{position:sticky;top:0;z-index:200;background:rgba(15,15,26,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 12px}
+    .main-tab-list{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;max-width:900px;margin:0 auto;padding:8px 0}
+    .main-tab-list::-webkit-scrollbar{display:none}
+    .main-tab-btn{flex-shrink:0;padding:10px 16px;border:none;border-radius:var(--radius-md) var(--radius-md) 0 0;background:transparent;color:var(--text-muted);font-family:'Noto Sans KR',sans-serif;font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s;white-space:nowrap;position:relative;display:flex;align-items:center;gap:5px}
+    .main-tab-btn:hover{color:var(--text-secondary);background:rgba(255,255,255,.03)}
+    .main-tab-btn.active{color:#fff;background:rgba(102,126,234,.15)}
+    .main-tab-btn.active::after{content:'';position:absolute;bottom:0;left:12px;right:12px;height:2px;background:var(--gradient-hero);border-radius:2px 2px 0 0}
+    .main-tab-btn .tab-emoji{font-size:1rem}
+
+    /* ===== CONTENT WRAPPER ===== */
+    .main-section{display:none;animation:fadeIn .4s ease;max-width:800px;margin:0 auto;padding:24px 20px 80px}
+    .main-section.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+    /* ===== SUB TABS (Food guide) ===== */
+    .sub-tab-nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:24px;padding-bottom:4px;position:sticky;top:54px;z-index:100;background:rgba(15,15,26,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:12px 0}
+    .sub-tab-nav::-webkit-scrollbar{display:none}
+    .sub-tab-btn{flex-shrink:0;padding:8px 16px;border:1px solid rgba(255,255,255,.08);border-radius:50px;background:var(--bg-card);color:var(--text-secondary);font-family:'Noto Sans KR',sans-serif;font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s;white-space:nowrap}
+    .sub-tab-btn:hover{background:var(--bg-card-hover);color:var(--text-primary)}
+    .sub-tab-btn.active{background:var(--gradient-hero);color:#fff;border-color:transparent;box-shadow:0 4px 16px rgba(102,126,234,.35)}
+    .sub-section{display:none;animation:fadeIn .4s ease}
+    .sub-section.active{display:block}
+
+    /* ===== SECTION HEADERS ===== */
+    .sec-header{margin-bottom:24px}
+    .sec-header h2{font-size:1.4rem;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+    .sec-header p{color:var(--text-secondary);font-size:.85rem}
+    .week-badge{display:inline-block;padding:3px 10px;background:var(--gradient-hero);border-radius:50px;font-size:.7rem;font-weight:600;color:#fff}
+
+    /* ===== INFO BANNER ===== */
+    .info-banner{background:linear-gradient(135deg,rgba(102,126,234,.1),rgba(168,85,247,.1));border:1px solid rgba(102,126,234,.2);border-radius:var(--radius-lg);padding:18px;margin-bottom:24px;position:relative;overflow:hidden}
+    .info-banner::before{content:'';position:absolute;top:0;right:0;width:100px;height:100px;background:radial-gradient(circle,rgba(168,85,247,.15),transparent 70%);border-radius:50%;transform:translate(30%,-30%)}
+    .info-banner h3{font-size:.95rem;font-weight:700;margin-bottom:6px;color:var(--accent-info)}
+    .info-banner p{font-size:.8rem;color:var(--text-secondary);line-height:1.6}
+
+    /* ===== SEVERITY GROUP (food guide) ===== */
+    .severity-group{margin-bottom:24px}
+    .severity-title{display:flex;align-items:center;gap:8px;padding:12px 16px;border-radius:var(--radius-md) var(--radius-md) 0 0;font-weight:700;font-size:.92rem;letter-spacing:-.3px}
+    .severity-title.danger{background:linear-gradient(135deg,rgba(255,71,87,.15),rgba(255,71,87,.05));color:var(--accent-danger);border-left:3px solid var(--accent-danger)}
+    .severity-title.warning{background:linear-gradient(135deg,rgba(255,165,2,.15),rgba(255,165,2,.05));color:var(--accent-warning);border-left:3px solid var(--accent-warning)}
+    .severity-title.caution{background:linear-gradient(135deg,rgba(46,213,115,.15),rgba(46,213,115,.05));color:var(--accent-caution);border-left:3px solid var(--accent-caution)}
+    .food-list{border:1px solid rgba(255,255,255,.05);border-top:none;border-radius:0 0 var(--radius-md) var(--radius-md);overflow:hidden}
+    .food-item{display:flex;align-items:flex-start;gap:12px;padding:13px 16px;background:var(--bg-card);border-bottom:1px solid rgba(255,255,255,.04);transition:background .2s}
+    .food-item:last-child{border-bottom:none}
+    .food-item:hover{background:var(--bg-card-hover)}
+    .food-emoji{font-size:1.4rem;flex-shrink:0;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);background:rgba(255,255,255,.04)}
+    .food-info{flex:1;min-width:0}
+    .food-name{font-weight:600;font-size:.88rem;margin-bottom:2px}
+    .food-reason{font-size:.76rem;color:var(--text-secondary);line-height:1.5}
+    .food-tag{display:inline-block;padding:2px 8px;border-radius:50px;font-size:.63rem;font-weight:600;margin-top:5px}
+    .food-tag.danger{background:var(--accent-danger-bg);color:var(--accent-danger);border:1px solid var(--accent-danger-border)}
+    .food-tag.warning{background:var(--accent-warning-bg);color:var(--accent-warning);border:1px solid var(--accent-warning-border)}
+    .food-tag.caution{background:var(--accent-caution-bg);color:var(--accent-caution);border:1px solid var(--accent-caution-border)}
+
+    /* ===== LEGEND ===== */
+    .legend{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+    .legend-item{background:var(--bg-card);border-radius:var(--radius-md);padding:14px 10px;text-align:center;border:1px solid rgba(255,255,255,.05);transition:transform .3s,box-shadow .3s}
+    .legend-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-card)}
+    .legend-item.danger{border-color:var(--accent-danger-border);background:var(--accent-danger-bg)}
+    .legend-item.warning{border-color:var(--accent-warning-border);background:var(--accent-warning-bg)}
+    .legend-item.caution{border-color:var(--accent-caution-border);background:var(--accent-caution-bg)}
+    .legend-icon{font-size:1.4rem;margin-bottom:4px}
+    .legend-label{font-weight:700;font-size:.8rem}
+    .legend-item.danger .legend-label{color:var(--accent-danger)}
+    .legend-item.warning .legend-label{color:var(--accent-warning)}
+    .legend-item.caution .legend-label{color:var(--accent-caution)}
+    .legend-desc{font-size:.68rem;color:var(--text-muted);line-height:1.4}
+
+    /* ===== SEARCH ===== */
+    .search-box{position:relative;margin-bottom:20px}
+    .search-box input{width:100%;padding:12px 16px 12px 42px;background:var(--bg-card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);color:var(--text-primary);font-family:'Noto Sans KR',sans-serif;font-size:.85rem;outline:none;transition:border-color .3s,box-shadow .3s}
+    .search-box input::placeholder{color:var(--text-muted)}
+    .search-box input:focus{border-color:rgba(102,126,234,.5);box-shadow:0 0 0 4px rgba(102,126,234,.1)}
+    .search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:1rem;opacity:.4}
+    .search-count{text-align:center;font-size:.75rem;color:var(--text-muted);margin-top:6px;display:none}
+    .search-count.visible{display:block}
+    .food-item.hidden{display:none}
+    .food-item.highlight{background:rgba(102,126,234,.08)!important}
+    .severity-group.hidden{display:none}
+
+    /* ===== CARD (generic) ===== */
+    .card{background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:18px;margin-bottom:20px;transition:transform .2s;overflow:hidden}
+    .card:hover{transform:translateY(-1px)}
+    .card h3{font-size:.92rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+
+    /* ===== CHECKLIST ===== */
+    .timeline-group{margin-bottom:32px}
+    .timeline-label{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .timeline-label h3{font-size:1.1rem;font-weight:700;color:var(--text-primary)}
+    .timeline-badge{padding:4px 12px;border-radius:50px;font-size:.68rem;font-weight:700;color:#fff}
+    .timeline-badge.urgent{background:linear-gradient(135deg,#ff4757,#ff6b81)}
+    .timeline-badge.soon{background:linear-gradient(135deg,#ffa502,#ffc048)}
+    .timeline-badge.plan{background:linear-gradient(135deg,#2ed573,#7bed9f)}
+    .timeline-badge.extra{background:linear-gradient(135deg,#70a1ff,#a29bfe)}
+
+    .checklist-item{background:var(--bg-card);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius-md);padding:16px;margin-bottom:10px;transition:transform .2s}
+    .checklist-item:hover{transform:translateY(-1px)}
+    .checklist-item h4{font-size:.9rem;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+    .checklist-item .desc{font-size:.78rem;color:var(--text-secondary);line-height:1.6;margin-bottom:8px}
+    .checklist-item .method{background:rgba(102,126,234,.06);border-radius:var(--radius-sm);padding:10px 12px;font-size:.74rem;color:var(--text-secondary);line-height:1.6}
+    .checklist-item .method strong{color:var(--accent-info);font-weight:600}
+
+    .benefit-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.76rem}
+    .benefit-table th{background:rgba(102,126,234,.1);color:var(--accent-info);font-weight:600;padding:8px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+    .benefit-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text-secondary);vertical-align:top}
+    .benefit-table tr:hover td{background:rgba(255,255,255,.02)}
+
+    .alert-box{padding:10px 14px;border-radius:var(--radius-sm);font-size:.76rem;margin:8px 0;line-height:1.5}
+    .alert-box.warn{background:rgba(255,165,2,.08);border-left:3px solid var(--accent-warning);color:var(--accent-warning)}
+    .alert-box.info{background:rgba(112,161,255,.08);border-left:3px solid var(--accent-info);color:var(--accent-info)}
+    .alert-box.danger{background:rgba(255,71,87,.08);border-left:3px solid var(--accent-danger);color:var(--accent-danger)}
+    .alert-box.success{background:rgba(46,213,115,.08);border-left:3px solid var(--accent-caution);color:var(--accent-caution)}
+
+    /* ===== TIP CARD ===== */
+    .tip-card{background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:18px;margin-top:28px}
+    .tip-card h3{font-size:.92rem;font-weight:700;color:var(--accent-pink);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .tip-list{list-style:none}
+    .tip-list li{padding:7px 0;font-size:.8rem;color:var(--text-secondary);display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid rgba(255,255,255,.03)}
+    .tip-list li:last-child{border-bottom:none}
+    .tip-list li::before{content:'✦';color:var(--accent-purple);flex-shrink:0;margin-top:1px}
+
+    /* ===== SUPPLEMENT TIMELINE ===== */
+    .supp-timeline{position:relative;padding-left:28px}
+    .supp-timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,rgba(102,126,234,.4),rgba(168,85,247,.4),rgba(255,107,157,.4))}
+    .supp-item{position:relative;margin-bottom:20px;padding-left:20px}
+    .supp-item::before{content:'';position:absolute;left:-22px;top:8px;width:12px;height:12px;border-radius:50%;border:2px solid var(--accent-purple);background:var(--bg-primary)}
+    .supp-item.active-now::before{background:var(--accent-purple);box-shadow:0 0 12px rgba(168,85,247,.5)}
+    .supp-card{background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-md);padding:14px 16px;transition:transform .2s}
+    .supp-card:hover{transform:translateX(4px)}
+    .supp-card h4{font-size:.88rem;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+    .supp-card .supp-period{font-size:.7rem;color:var(--accent-info);font-weight:600;margin-bottom:6px}
+    .supp-card .supp-desc{font-size:.76rem;color:var(--text-secondary);line-height:1.5}
+    .supp-card .supp-dose{display:inline-block;margin-top:6px;padding:3px 10px;border-radius:50px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.25);font-size:.68rem;font-weight:600;color:var(--accent-purple)}
+
+    /* ===== TEST SCHEDULE ===== */
+    .test-card{background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-md);padding:16px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start;transition:transform .2s}
+    .test-card:hover{transform:translateX(4px)}
+    .test-week{flex-shrink:0;width:64px;text-align:center}
+    .test-week .week-num{font-size:1.1rem;font-weight:800;color:var(--accent-info)}
+    .test-week .week-label{font-size:.6rem;color:var(--text-muted);font-weight:500}
+    .test-info h4{font-size:.88rem;font-weight:700;margin-bottom:4px}
+    .test-info p{font-size:.76rem;color:var(--text-secondary);line-height:1.5}
+    .test-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+    .test-tag{padding:2px 8px;border-radius:50px;font-size:.62rem;font-weight:600;background:rgba(112,161,255,.1);border:1px solid rgba(112,161,255,.2);color:var(--accent-info)}
+    .test-tag.insurance{background:rgba(46,213,115,.1);border-color:rgba(46,213,115,.2);color:var(--accent-caution)}
+
+    /* ===== BENEFITS ===== */
+    .benefit-card{background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:18px;margin-bottom:14px;transition:transform .2s}
+    .benefit-card:hover{transform:translateY(-2px)}
+    .benefit-card h4{font-size:.9rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+    .benefit-card .benefit-desc{font-size:.78rem;color:var(--text-secondary);line-height:1.6}
+    .benefit-amount{display:inline-block;padding:4px 12px;border-radius:50px;background:linear-gradient(135deg,rgba(102,126,234,.15),rgba(168,85,247,.15));border:1px solid rgba(102,126,234,.2);font-size:.78rem;font-weight:700;color:var(--accent-info);margin-bottom:8px}
+
+    .region-section{margin-bottom:24px}
+    .region-title{font-size:1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+
+    /* ===== FETAL DEV ===== */
+    .dev-card{background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:18px;margin-bottom:14px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s}
+    .dev-card:hover{transform:translateY(-2px)}
+    .dev-icon{flex-shrink:0;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,rgba(102,126,234,.15),rgba(168,85,247,.15));display:flex;align-items:center;justify-content:center;font-size:1.6rem;border:2px solid rgba(102,126,234,.2)}
+    .dev-info{flex:1}
+    .dev-info h4{font-size:.9rem;font-weight:700;margin-bottom:2px}
+    .dev-info .dev-size{font-size:.72rem;color:var(--accent-purple);font-weight:600;margin-bottom:6px}
+    .dev-info p{font-size:.76rem;color:var(--text-secondary);line-height:1.5}
+    .dev-info .mom-note{margin-top:6px;padding:6px 10px;background:rgba(255,107,157,.06);border-radius:var(--radius-sm);border-left:2px solid var(--accent-pink);font-size:.72rem;color:var(--accent-pink)}
+
+    /* ===== CONTACT TABLE ===== */
+    .contact-table{width:100%;border-collapse:collapse;font-size:.76rem;margin-top:10px}
+    .contact-table th{background:rgba(168,85,247,.1);color:var(--accent-purple);font-weight:600;padding:8px 10px;text-align:left}
+    .contact-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text-secondary)}
+    .contact-table a{color:var(--accent-info);text-decoration:none}
+    .contact-table a:hover{text-decoration:underline}
+
+    /* ===== FOOTER ===== */
+    .footer{text-align:center;padding:32px 20px;border-top:1px solid rgba(255,255,255,.05);max-width:800px;margin:0 auto}
+    .footer .disclaimer{background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.15);border-radius:var(--radius-md);padding:14px;margin-bottom:14px}
+    .footer .disclaimer p{color:var(--text-secondary);font-size:.75rem;line-height:1.6}
+    .footer>p{font-size:.7rem;color:var(--text-muted)}
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--gradient-hero);border:none;color:#fff;font-size:1.1rem;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;box-shadow:0 4px 20px rgba(102,126,234,.4);z-index:300;display:flex;align-items:center;justify-content:center}
+    .back-to-top.visible{opacity:1;visibility:visible}
+    .back-to-top:hover{transform:translateY(-3px)}
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:600px){
+      .hero{padding:48px 16px 24px}
+      .hero h1{font-size:1.5rem}
+      .hero-emoji{font-size:2.8rem}
+      .main-tab-btn{padding:8px 12px;font-size:.72rem}
+      .main-section{padding:20px 16px 80px}
+      .sec-header h2{font-size:1.2rem}
+      .legend{grid-template-columns:repeat(3,1fr);gap:6px}
+      .legend-item{padding:10px 6px}
+      .legend-icon{font-size:1.2rem}
+      .legend-label{font-size:.7rem}
+      .legend-desc{font-size:.6rem}
+      .sub-tab-btn{padding:7px 12px;font-size:.72rem}
+      .food-item{padding:11px 13px;gap:10px}
+      .food-emoji{font-size:1.2rem;width:30px;height:30px}
+      .food-name{font-size:.82rem}
+      .food-reason{font-size:.72rem}
+      .checklist-item h4{font-size:.84rem}
+      .dev-card{gap:12px;padding:14px}
+      .dev-icon{width:46px;height:46px;font-size:1.3rem}
+      .test-card{padding:13px;gap:10px}
+      .test-week{width:52px}
+      .benefit-table{font-size:.7rem}
+      .sub-tab-nav{top:48px}
+    }
+    @media(max-width:360px){
+      .main-tab-btn{padding:7px 10px;font-size:.68rem;gap:3px}
+      .main-tab-btn .tab-emoji{font-size:.85rem}
+      .hero h1{font-size:1.3rem}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="hero-emoji">🤰</div>
+    <h1>임신 종합 가이드 2026</h1>
+    <p>음식 · 생활 · 영양제 · 검사 · 혜택 · 태아발달<br>건강한 임신을 위한 모든 정보를 한 곳에서</p>
+  </div>
+</section>
+
+<!-- ===== MAIN TAB NAV ===== -->
+<nav class="main-tab-nav">
+  <div class="main-tab-list" role="tablist">
+    <button class="main-tab-btn active" data-main="food"><span class="tab-emoji">🍽️</span> 음식</button>
+    <button class="main-tab-btn" data-main="checklist"><span class="tab-emoji">✅</span> 할 일</button>
+    <button class="main-tab-btn" data-main="lifestyle"><span class="tab-emoji">⚠️</span> 생활주의</button>
+    <button class="main-tab-btn" data-main="supplement"><span class="tab-emoji">💊</span> 영양제</button>
+    <button class="main-tab-btn" data-main="tests"><span class="tab-emoji">🏥</span> 검사</button>
+    <button class="main-tab-btn" data-main="benefits"><span class="tab-emoji">💰</span> 혜택</button>
+    <button class="main-tab-btn" data-main="fetal"><span class="tab-emoji">👶</span> 태아발달</button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- TAB 1: 음식 가이드 -->
+<!-- ============================================================ -->
+<section class="main-section active" id="food">
+  <div class="sec-header">
+    <h2>🍽️ 임신 중 음식 안전 가이드</h2>
+    <p>경중에 따라 금지 · 제한 · 주의 음식을 주차별로 확인하세요</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item danger"><div class="legend-icon">🚫</div><div class="legend-label">금지</div><div class="legend-desc">절대 섭취 금지</div></div>
+    <div class="legend-item warning"><div class="legend-icon">⚠️</div><div class="legend-label">제한</div><div class="legend-desc">양을 줄이거나 주의</div></div>
+    <div class="legend-item caution"><div class="legend-icon">💡</div><div class="legend-label">주의</div><div class="legend-desc">상황에 따라 조심</div></div>
+  </div>
+
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="음식 이름으로 검색 (예: 참치, 커피, 치즈...)">
+  </div>
+  <div class="search-count" id="searchCount"></div>
+
+  <div class="sub-tab-nav" role="tablist">
+    <button class="sub-tab-btn active" data-sub="all">📋 전체 기간</button>
+    <button class="sub-tab-btn" data-sub="tri1">🌱 초기 1~12주</button>
+    <button class="sub-tab-btn" data-sub="tri2">🌿 중기 13~27주</button>
+    <button class="sub-tab-btn" data-sub="tri3">🌸 후기 28~40주</button>
+  </div>
+
+  <!-- 전체 기간 -->
+  <div class="sub-section active" id="sub-all">
+    <div class="info-banner"><h3>💜 전체 기간 공통 주의사항</h3><p>아래 음식들은 임신 전 기간에 걸쳐 주의가 필요합니다. 금지 음식은 어떤 주차에서든 절대 피하세요.</p></div>
+
+    <div class="severity-group" data-severity="danger">
+      <div class="severity-title danger">🚫 절대 금지 음식</div>
+      <div class="food-list">
+        <div class="food-item" data-name="술 알코올 맥주 소주 와인"><div class="food-emoji">🍺</div><div class="food-info"><div class="food-name">술 (모든 알코올)</div><div class="food-reason">태아 알코올 스펙트럼 장애(FASD) 유발. 소량이라도 안전한 양은 없습니다.</div><span class="food-tag danger">전 기간 금지</span></div></div>
+        <div class="food-item" data-name="생고기 육회 타르타르"><div class="food-emoji">🥩</div><div class="food-info"><div class="food-name">생고기 / 육회</div><div class="food-reason">톡소플라스마, 리스테리아, 살모넬라 등 기생충·세균 감염 위험. 반드시 완전히 익혀서 드세요.</div><span class="food-tag danger">식중독 위험</span></div></div>
+        <div class="food-item" data-name="생선회 회 날생선 초밥 스시 사시미"><div class="food-emoji">🍣</div><div class="food-info"><div class="food-name">날생선 / 회 / 초밥</div><div class="food-reason">리스테리아, 기생충 감염 및 수은 중독 위험. 생연어, 참치회 등 모든 날생선 포함.</div><span class="food-tag danger">기생충·수은 위험</span></div></div>
+        <div class="food-item" data-name="생굴 생조개 생새우 날 해산물"><div class="food-emoji">🦪</div><div class="food-info"><div class="food-name">생 해산물 (굴, 조개, 새우)</div><div class="food-reason">노로바이러스, 비브리오 등 식중독 위험 매우 높음. 반드시 익혀 드세요.</div><span class="food-tag danger">식중독 위험</span></div></div>
+        <div class="food-item" data-name="생달걀 날달걀 반숙 마요네즈"><div class="food-emoji">🥚</div><div class="food-info"><div class="food-name">생달걀 / 반숙란</div><div class="food-reason">살모넬라균 감염 위험. 흰자·노른자 완전히 익힐 것. 수제 마요네즈도 주의.</div><span class="food-tag danger">살모넬라 위험</span></div></div>
+        <div class="food-item" data-name="비살균 우유 생유 소프트 치즈 브리 카망베르"><div class="food-emoji">🧀</div><div class="food-info"><div class="food-name">비살균 유제품 / 소프트 치즈</div><div class="food-reason">리스테리아균 감염 위험. 브리, 카망베르, 블루치즈 등 곰팡이 숙성 치즈 피하세요.</div><span class="food-tag danger">리스테리아 위험</span></div></div>
+        <div class="food-item" data-name="상어 황새치 왕고등어 옥돔 수은"><div class="food-emoji">🦈</div><div class="food-info"><div class="food-name">수은 함량 높은 생선</div><div class="food-reason">상어, 황새치, 왕고등어, 옥돔 등. 수은이 태아 신경 발달에 악영향.</div><span class="food-tag danger">수은 중독 위험</span></div></div>
+        <div class="food-item" data-name="쑥 익모초 홍화 한약재"><div class="food-emoji">🌿</div><div class="food-info"><div class="food-name">쑥 / 익모초 / 홍화</div><div class="food-reason">자궁 수축 유발 → 유산·조산 위험. 쑥떡, 쑥 음료도 포함.</div><span class="food-tag danger">자궁수축 유발</span></div></div>
+        <div class="food-item" data-name="율무 율무차"><div class="food-emoji">🌾</div><div class="food-info"><div class="food-name">율무 / 율무차</div><div class="food-reason">자궁 수축 촉진. 한의학적으로 임산부 금기 식재료.</div><span class="food-tag danger">자궁수축 유발</span></div></div>
+      </div>
+    </div>
+
+    <div class="severity-group" data-severity="warning">
+      <div class="severity-title warning">⚠️ 줄여야 하는 음식</div>
+      <div class="food-list">
+        <div class="food-item" data-name="커피 카페인 에스프레소 아메리카노 라떼"><div class="food-emoji">☕</div><div class="food-info"><div class="food-name">커피 / 카페인 음료</div><div class="food-reason">하루 200mg 이하(아메리카노 1~2잔). 과다 시 저체중아·유산 위험 증가. 녹차·초콜릿 카페인도 합산.</div><span class="food-tag warning">하루 200mg 이하</span></div></div>
+        <div class="food-item" data-name="참치 캔 참치 통조림"><div class="food-emoji">🐟</div><div class="food-info"><div class="food-name">참치 통조림</div><div class="food-reason">수은 포함. 주 2회(약 170g) 이하로 제한.</div><span class="food-tag warning">주 2회 이하</span></div></div>
+        <div class="food-item" data-name="인스턴트 라면 컵라면 가공식품"><div class="food-emoji">🍜</div><div class="food-info"><div class="food-name">인스턴트 / 가공식품</div><div class="food-reason">나트륨, 방부제, 인공첨가물 → 부종·고혈압 위험. 자연식품으로 대체.</div><span class="food-tag warning">나트륨·첨가물</span></div></div>
+        <div class="food-item" data-name="짠 음식 소금 간장 된장 젓갈"><div class="food-emoji">🧂</div><div class="food-info"><div class="food-name">과도한 나트륨 (짠 음식)</div><div class="food-reason">고혈압·부종 유발. 젓갈, 장아찌 줄이고 국물도 싱겁게.</div><span class="food-tag warning">부종·고혈압</span></div></div>
+        <div class="food-item" data-name="설탕 과자 케이크 사탕 디저트"><div class="food-emoji">🍰</div><div class="food-info"><div class="food-name">고당류 식품</div><div class="food-reason">임신성 당뇨 위험 ↑. 급격한 혈당 변화는 태아에게도 영향.</div><span class="food-tag warning">임신성 당뇨</span></div></div>
+        <div class="food-item" data-name="비타민A 레티놀 간 동물간"><div class="food-emoji">🫀</div><div class="food-info"><div class="food-name">동물 간 (소간, 돼지간)</div><div class="food-reason">비타민A(레티놀) 과다 → 태아 기형 위험. 소량 or 피하기.</div><span class="food-tag warning">비타민A 과다</span></div></div>
+        <div class="food-item" data-name="탄산음료 콜라 에너지드링크"><div class="food-emoji">🥤</div><div class="food-info"><div class="food-name">탄산음료 / 에너지드링크</div><div class="food-reason">높은 당분·카페인·인공감미료. 에너지드링크는 특히 카페인 과다.</div><span class="food-tag warning">카페인·당분</span></div></div>
+      </div>
+    </div>
+
+    <div class="severity-group" data-severity="caution">
+      <div class="severity-title caution">💡 주의하며 먹을 음식</div>
+      <div class="food-list">
+        <div class="food-item" data-name="매운 음식 고추 떡볶이 불닭"><div class="food-emoji">🌶️</div><div class="food-info"><div class="food-name">매운 음식</div><div class="food-reason">태아에 직접 해로운 것은 아니나, 위장 장애·속쓰림 유발 가능.</div><span class="food-tag caution">소화불량 가능</span></div></div>
+        <div class="food-item" data-name="녹차 홍차 마테차 카페인"><div class="food-emoji">🍵</div><div class="food-info"><div class="food-name">녹차 / 홍차 / 마테차</div><div class="food-reason">카페인 + 철분 흡수 방해. 식후 30분 후, 하루 1~2잔 이하.</div><span class="food-tag caution">철분 흡수 방해</span></div></div>
+        <div class="food-item" data-name="파인애플 파파야"><div class="food-emoji">🍍</div><div class="food-info"><div class="food-name">파인애플 / 파파야 (미숙과)</div><div class="food-reason">일반적인 양은 OK. 미숙 파파야의 라텍스 성분은 자궁수축 유발 가능.</div><span class="food-tag caution">과다 섭취 주의</span></div></div>
+        <div class="food-item" data-name="인삼 홍삼"><div class="food-emoji">🫚</div><div class="food-info"><div class="food-name">인삼 / 홍삼</div><div class="food-reason">혈압 변화 가능. 체질에 따라 부작용. 의료진 상담 후 섭취.</div><span class="food-tag caution">의료진 상담</span></div></div>
+        <div class="food-item" data-name="훈제 연어 핫도그 소시지 햄"><div class="food-emoji">🌭</div><div class="food-info"><div class="food-name">훈제 생선 / 가공육</div><div class="food-reason">리스테리아 오염 가능. 반드시 뜨겁게 재가열. 아질산나트륨 주의.</div><span class="food-tag caution">재가열 필수</span></div></div>
+        <div class="food-item" data-name="과일 과다 포도 수박 당"><div class="food-emoji">🍇</div><div class="food-info"><div class="food-name">과일 과다 섭취</div><div class="food-reason">당분이 높으므로 하루 2~3회. 포도, 수박, 망고 등 고당 과일 주의.</div><span class="food-tag caution">과당 조절</span></div></div>
+      </div>
+    </div>
+
+    <div class="tip-card"><h3>💝 전체 기간 식사 팁</h3><ul class="tip-list"><li>식재료는 신선한 것으로, 조리 전 깨끗이 씻으세요</li><li>고기·해산물은 내부 온도 75°C 이상 완전히 익히기</li><li>조리된 음식은 2시간 이내 냉장 보관</li><li>외식 시 위생 좋은 곳 선택</li><li>영양 보충제는 담당 의사 상의 후 복용</li></ul></div>
+  </div>
+
+  <!-- 초기 1~12주 -->
+  <div class="sub-section" id="sub-tri1">
+    <div class="info-banner"><h3>🌱 초기 핵심 포인트</h3><p>태아의 주요 장기(뇌, 심장, 척수)가 형성됩니다. 엽산 섭취가 매우 중요하며, 기형 유발 물질에 특히 민감한 시기입니다.</p></div>
+    <div class="severity-group"><div class="severity-title danger">🚫 초기 특별 금지</div><div class="food-list">
+      <div class="food-item" data-name="비타민A 보충제 레티놀 영양제"><div class="food-emoji">💊</div><div class="food-info"><div class="food-name">비타민A 과다 보충제</div><div class="food-reason">초기 레티놀 과다 → 태아 기형 위험 ↑. 일일 770μg 초과 금지. 베타카로틴 형태는 안전.</div><span class="food-tag danger">태아 기형 위험</span></div></div>
+      <div class="food-item" data-name="이부프로펜 아스피린 진통제"><div class="food-emoji">💊</div><div class="food-info"><div class="food-name">일반 진통제 (이부프로펜 등)</div><div class="food-reason">NSAIDs 계열은 초기 유산 위험 ↑. 의사 처방 필수.</div><span class="food-tag danger">의사 처방 필수</span></div></div>
+    </div></div>
+    <div class="severity-group"><div class="severity-title warning">⚠️ 초기 제한</div><div class="food-list">
+      <div class="food-item" data-name="카페인 커피 초기"><div class="food-emoji">☕</div><div class="food-info"><div class="food-name">카페인 (더 엄격하게)</div><div class="food-reason">초기 유산 위험이 높으므로 하루 100mg 이하. 디카페인 대체 권장.</div><span class="food-tag warning">100mg 이하</span></div></div>
+      <div class="food-item" data-name="기름진 튀김 느끼한"><div class="food-emoji">🍳</div><div class="food-info"><div class="food-name">기름진 / 튀긴 음식</div><div class="food-reason">입덧 악화 가능. 담백하고 소화 잘 되는 음식 선택.</div><span class="food-tag warning">입덧 악화</span></div></div>
+      <div class="food-item" data-name="감초 감초차 리코리스"><div class="food-emoji">🫖</div><div class="food-info"><div class="food-name">감초 / 감초차</div><div class="food-reason">글리시리진 성분이 태반 통과 → 태아 인지 발달 영향.</div><span class="food-tag warning">태아 발달 영향</span></div></div>
+    </div></div>
+    <div class="severity-group"><div class="severity-title caution">💡 초기 주의</div><div class="food-list">
+      <div class="food-item" data-name="찬 음식 아이스크림 차가운"><div class="food-emoji">🍦</div><div class="food-info"><div class="food-name">차가운 음식</div><div class="food-reason">소화 기능 저하·입덧 유발 가능. 상온·따뜻한 음식 권장.</div><span class="food-tag caution">소화불량</span></div></div>
+      <div class="food-item" data-name="새싹채소 알팔파 무순 스프라우트"><div class="food-emoji">🌱</div><div class="food-info"><div class="food-name">생 새싹채소</div><div class="food-reason">재배 환경상 세균 번식 쉬움. 익혀서 or 철저 세척 후.</div><span class="food-tag caution">세균 오염</span></div></div>
+      <div class="food-item" data-name="계피 시나몬 로즈마리 향신료"><div class="food-emoji">🫙</div><div class="food-info"><div class="food-name">특정 향신료 (계피, 로즈마리)</div><div class="food-reason">대량 섭취 시 자궁 수축 보고. 요리 소량은 OK, 고농축 보충제는 금지.</div><span class="food-tag caution">대량 섭취 금지</span></div></div>
+    </div></div>
+    <div class="tip-card"><h3>💝 초기 식사 팁</h3><ul class="tip-list"><li>엽산 풍부 음식: 시금치, 브로콜리, 아보카도</li><li>입덧 심할 때는 소량씩 자주 먹기</li><li>크래커, 토스트 등 담백한 간식 곁에 두기</li><li>생강차는 입덧 완화에 도움</li><li>수분 충분히, 한꺼번에 많이 X</li></ul></div>
+  </div>
+
+  <!-- 중기 13~27주 -->
+  <div class="sub-section" id="sub-tri2">
+    <div class="info-banner"><h3>🌿 중기 핵심 포인트</h3><p>태아의 뼈와 근육이 발달하고 체중이 빠르게 증가합니다. 칼슘·철분·DHA 충분 섭취 중요. 임신성 당뇨 검사 시기이므로 당분 주의!</p></div>
+    <div class="severity-group"><div class="severity-title danger">🚫 전체 기간 금지 동일 적용</div><div class="food-list">
+      <div class="food-item" data-name="전체 금지 중기"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">전체 기간 금지 음식 모두 해당</div><div class="food-reason">술, 생고기, 날생선, 생해산물, 비살균 유제품, 수은 높은 생선 등 동일 적용.</div><span class="food-tag danger">전체기간 참고</span></div></div>
+    </div></div>
+    <div class="severity-group"><div class="severity-title warning">⚠️ 중기 제한</div><div class="food-list">
+      <div class="food-item" data-name="당분 설탕 과당 임신성 당뇨 과자"><div class="food-emoji">🍬</div><div class="food-info"><div class="food-name">고당분 식품</div><div class="food-reason">임신성 당뇨 검사(24~28주) 대비. 흰 빵·과자·단 음료 줄이고 통곡물로.</div><span class="food-tag warning">임신성 당뇨 예방</span></div></div>
+      <div class="food-item" data-name="백미 흰쌀밥 정제 탄수화물"><div class="food-emoji">🍚</div><div class="food-info"><div class="food-name">정제 탄수화물</div><div class="food-reason">혈당 지수(GI) 높음. 현미·잡곡·통밀빵으로 대체.</div><span class="food-tag warning">혈당 관리</span></div></div>
+      <div class="food-item" data-name="과일 주스 오렌지주스"><div class="food-emoji">🧃</div><div class="food-info"><div class="food-name">과일 주스 / 가당 음료</div><div class="food-reason">섬유질 없이 당분 농축. 과일은 통째로!</div><span class="food-tag warning">혈당 급등</span></div></div>
+      <div class="food-item" data-name="짠 음식 나트륨 부종 중기"><div class="food-emoji">🧂</div><div class="food-info"><div class="food-name">짠 음식 (부종 관리)</div><div class="food-reason">중기부터 부종 시작. 나트륨 2,000mg 이하. 칼륨 풍부 식품(바나나, 고구마) 함께.</div><span class="food-tag warning">부종 예방</span></div></div>
+    </div></div>
+    <div class="severity-group"><div class="severity-title caution">💡 중기 주의</div><div class="food-list">
+      <div class="food-item" data-name="유제품 칼슘 가스 복부팽만"><div class="food-emoji">🥛</div><div class="food-info"><div class="food-name">유제품 과다</div><div class="food-reason">칼슘 보충 좋지만 유당불내증 시 가스·팽만. 요거트·치즈로 대체.</div><span class="food-tag caution">체질에 맞게</span></div></div>
+      <div class="food-item" data-name="콩 두부 이소플라본 두유"><div class="food-emoji">🫘</div><div class="food-info"><div class="food-name">콩제품 과다</div><div class="food-reason">좋은 단백질이지만 이소플라본이 에스트로겐 유사 작용. 두부 1/2모/일 정도.</div><span class="food-tag caution">적정량</span></div></div>
+      <div class="food-item" data-name="떡 찹쌀떡 간식"><div class="food-emoji">🍡</div><div class="food-info"><div class="food-name">떡 / 찹쌀 제품</div><div class="food-reason">혈당 지수 높고 소화 느림. 소량, 견과류·요거트로 대체.</div><span class="food-tag caution">혈당·소화</span></div></div>
+    </div></div>
+    <div class="tip-card"><h3>💝 중기 식사 팁</h3><ul class="tip-list"><li>철분 풍부 음식: 소고기, 시금치, 두부</li><li>칼슘 흡수 → 비타민D 함께 (햇볕)</li><li>저수은 생선(고등어, 연어) 주 2~3회 익혀서</li><li>규칙적 식사, 폭식 금지</li><li>변비 예방: 식이섬유 + 수분</li></ul></div>
+  </div>
+
+  <!-- 후기 28~40주 -->
+  <div class="sub-section" id="sub-tri3">
+    <div class="info-banner"><h3>🌸 후기 핵심 포인트</h3><p>태아 뇌 발달 활발, 체중 가장 많이 증가. 소화 기능 저하·부종 심화 → 식사량·나트륨 특히 주의. 조산 예방 식이 관리도 중요.</p></div>
+    <div class="severity-group"><div class="severity-title danger">🚫 후기 특별 금지</div><div class="food-list">
+      <div class="food-item" data-name="전체 금지 후기"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">전체 기간 금지 음식 동일 적용</div><div class="food-reason">출산이 다가올수록 더욱 주의하세요.</div><span class="food-tag danger">전체기간 참고</span></div></div>
+      <div class="food-item" data-name="생강 과다 자궁수축"><div class="food-emoji">🫚</div><div class="food-info"><div class="food-name">생강 과다 섭취</div><div class="food-reason">후기 과다 섭취 시 출혈·자궁 수축 위험. 생강차 1잔 이하.</div><span class="food-tag danger">출혈 위험</span></div></div>
+    </div></div>
+    <div class="severity-group"><div class="severity-title warning">⚠️ 후기 제한</div><div class="food-list">
+      <div class="food-item" data-name="짠 음식 부종 임신중독증"><div class="food-emoji">🧂</div><div class="food-info"><div class="food-name">고나트륨 (더 엄격)</div><div class="food-reason">부종·전자간증 위험 ↑. 나트륨 1,500mg 이하. 국물·젓갈·가공식품 특히 줄이기.</div><span class="food-tag warning">임신중독증 예방</span></div></div>
+      <div class="food-item" data-name="과식 많이 먹기 소화"><div class="food-emoji">🍽️</div><div class="food-info"><div class="food-name">한 번에 많이 먹기 (과식)</div><div class="food-reason">커진 자궁이 위 압박 → 소화 장애·위산 역류. 하루 5~6회 소량씩.</div><span class="food-tag warning">소화불량·역류</span></div></div>
+      <div class="food-item" data-name="고칼로리 패스트푸드"><div class="food-emoji">🍔</div><div class="food-info"><div class="food-name">고칼로리 / 패스트푸드</div><div class="food-reason">과도한 체중 증가 → 임신성 당뇨·거대아·난산. 영양 밀도 높은 음식.</div><span class="food-tag warning">과체중 주의</span></div></div>
+      <div class="food-item" data-name="가스 양배추 브로콜리 콩류"><div class="food-emoji">🥦</div><div class="food-info"><div class="food-name">가스 유발 식품 (과다 시)</div><div class="food-reason">영양가 높지만 후기 복부 팽만 악화. 적당량, 불편 시 줄이기.</div><span class="food-tag warning">복부팽만</span></div></div>
+    </div></div>
+    <div class="severity-group"><div class="severity-title caution">💡 후기 주의</div><div class="food-list">
+      <div class="food-item" data-name="수분 물 빈뇨 취침전"><div class="food-emoji">💧</div><div class="food-info"><div class="food-name">취침 전 과도한 수분</div><div class="food-reason">빈뇨 심화. 잠자기 2시간 전부터 줄이기. 낮에 충분히 보충.</div><span class="food-tag caution">수면의 질</span></div></div>
+      <div class="food-item" data-name="배달 음식 외식"><div class="food-emoji">📦</div><div class="food-info"><div class="food-name">배달 음식</div><div class="food-reason">세균 번식 위험. 도착 즉시 재가열.</div><span class="food-tag caution">재가열 권장</span></div></div>
+      <div class="food-item" data-name="보양식 삼계탕 곰탕"><div class="food-emoji">🍲</div><div class="food-info"><div class="food-name">고칼로리 보양식</div><div class="food-reason">영양가 높지만 칼로리도 높음. 기름기 제거, 적당량.</div><span class="food-tag caution">칼로리 조절</span></div></div>
+      <div class="food-item" data-name="야식 밤참 늦은 식사"><div class="food-emoji">🌙</div><div class="food-info"><div class="food-name">야식 / 늦은 식사</div><div class="food-reason">위산 역류·소화불량 악화. 식후 3시간 이내 눕지 않기.</div><span class="food-tag caution">위산 역류</span></div></div>
+    </div></div>
+    <div class="tip-card"><h3>💝 후기 식사 팁</h3><ul class="tip-list"><li>하루 5~6회 소량씩 나누어 먹기</li><li>철분제 변비 → 식이섬유 함께</li><li>분만 준비: 단백질 충분 섭취</li><li>부종 심하면 칼륨 풍부 음식 + 다리 높이 올리기</li><li>출산 가까워지면 소화 잘 되는 음식 위주</li></ul></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 2: 할 일 체크리스트 -->
+<!-- ============================================================ -->
+<section class="main-section" id="checklist">
+  <div class="sec-header">
+    <h2>✅ 임신 확인 후 할 일 체크리스트</h2>
+    <p>순서대로 따라오기만 하면 됩니다 — 지원금·예약·보험·앱까지 실전 기반 정리</p>
+  </div>
+
+  <!-- 즉시 -->
+  <div class="timeline-group">
+    <div class="timeline-label"><span class="timeline-badge urgent">즉시</span><h3>임신 확인 직후 할 일</h3></div>
+
+    <div class="checklist-item"><h4>1️⃣ 산부인과 방문 & 임신확인서 발급</h4>
+      <div class="desc">소변 임신테스트기 양성 → 산부인과에서 초음파로 아기집(태낭) 확인 (보통 5~6주). <strong>임신확인서 2~3장</strong> 꼭 발급받으세요. 국민행복카드·보건소·직장·보험사 등 여러 곳에 제출. 사진으로도 저장! 산모수첩도 동시 신청.</div>
+    </div>
+
+    <div class="checklist-item"><h4>2️⃣ 국민행복카드 신청 + 바우처</h4>
+      <div class="desc">임신·출산 진료비를 지원받을 수 있는 필수 카드입니다.</div>
+      <table class="benefit-table"><tr><th>구분</th><th>지원 금액</th></tr><tr><td>단태아</td><td><strong>100만원</strong></td></tr><tr><td>다태아</td><td><strong>140만원</strong></td></tr></table>
+      <div class="method"><strong>신청 방법:</strong> 병원 내 카드 부스(간편) / 카드사 앱에서 '국민행복카드' 검색 / 육아 사이트(베베폼 등, 사은품 제공)</div>
+      <div class="alert-box warn">⚠️ 카드 신청 후 <strong>진료비 지원 신청</strong>까지 완료해야 합니다! 카드만 만들면 안 돼요.</div>
+    </div>
+
+    <div class="checklist-item"><h4>3️⃣ 보건소 임산부 등록</h4>
+      <div class="desc">거주지 관할 보건소 방문 (임신확인서 + 신분증) → 등록 하나로 여러 혜택!</div>
+      <table class="benefit-table"><tr><th>혜택</th><th>내용</th></tr>
+        <tr><td>🧪 무료 산전 검사</td><td>병원 따로 안 해도 됨! 기본 산전 검사 무료</td></tr>
+        <tr><td>🌿 엽산제</td><td>임신 초기 3개월분 무료 (등록 즉시 수령)</td></tr>
+        <tr><td>💉 철분제</td><td>16주 이후 무료 지급</td></tr>
+        <tr><td>📛 임산부 배지</td><td>대중교통 배려석 이용</td></tr>
+        <tr><td>🎓 출산 교실</td><td>모유 수유 교육, 출산 준비 교실 무료</td></tr>
+        <tr><td>✅ 임산부 주차증</td><td>공공시설 전용 주차구역</td></tr>
+        <tr><td>🎁 축하 선물 세트</td><td>지자체별 상이 — 현장에서 꼭 물어보세요!</td></tr>
+      </table>
+    </div>
+
+    <div class="checklist-item"><h4>4️⃣ 맘편한 임신 원스톱 서비스</h4>
+      <div class="desc">보건소 못 갔다면 온라인으로! 정부24(gov.kr) → '맘편한 임신' 검색 → 한 번에 통합 신청.</div>
+      <table class="benefit-table"><tr><th>항목</th><th>내용</th></tr>
+        <tr><td>KTX·SRT 할인</td><td>임산부 + 동반 1인 일반실 <strong>30% 할인</strong></td></tr>
+        <tr><td>엽산·철분제</td><td>보건소 연계, 택배 가능</td></tr>
+        <tr><td>에너지 바우처</td><td>저소득층 냉·난방비 지원 (해당자)</td></tr>
+      </table>
+    </div>
+
+    <div class="checklist-item"><h4>5️⃣ 엽산 + 비타민D 바로 복용 시작</h4>
+      <div class="desc">확인한 그날부터! 신경관은 초기에 이미 형성됩니다. 엽산 0.4~1mg/일, 비타민D 1,000~2,000IU/일.</div>
+      <div class="alert-box info">💡 상세 복용 타이밍은 <strong>💊 영양제 가이드</strong> 탭에서 확인하세요!</div>
+    </div>
+  </div>
+
+  <!-- 10주 전까지 -->
+  <div class="timeline-group">
+    <div class="timeline-label"><span class="timeline-badge soon">10주 전까지</span><h3>챙기면 좋은 항목</h3></div>
+
+    <div class="checklist-item"><h4>1️⃣ 단축근무 신청 (직장인)</h4>
+      <div class="desc">임신 12주 이내 → 하루 2시간 단축, 임금 삭감 없음 (법적 권리!). 32주 이후에도 동일 → 두 번 모두 챙기세요!</div>
+      <table class="benefit-table"><tr><th>2026년 강화된 직장 혜택</th><th>내용</th></tr>
+        <tr><td>출산휴가 급여 상한</td><td>월 <strong>220만원</strong> 인상</td></tr>
+        <tr><td>육아기 단축 급여</td><td>월 <strong>250만원</strong> 인상</td></tr>
+        <tr><td>육아기 10시 출근제 (신설)</td><td>출근 1시간 늦춰도 임금 그대로</td></tr>
+        <tr><td>6+6 부모육아휴직제</td><td>부모 모두 사용 시 6개월째 월 <strong>450만원</strong></td></tr>
+      </table>
+      <div class="alert-box info">💡 육아휴직 급여는 <strong>고용24(work24.go.kr)</strong>에서 신청. 미리 회원가입!</div>
+    </div>
+
+    <div class="checklist-item"><h4>2️⃣ 조리원 예약</h4>
+      <div class="desc">인기 조리원은 초기에 이미 마감! 예약금 걸어두면 보통 출산 3개월 전까지 100% 환불. 일단 잡아두고 변경하는 전략이 유리.</div>
+      <div class="alert-box info">💡 체크포인트: 시설·위생·프로그램·모유 수유 지원·집과의 거리</div>
+    </div>
+
+    <div class="checklist-item"><h4>3️⃣ 산후 도우미 예약</h4>
+      <div class="desc">3주 이용에 비용의 약 50% 정부 지원. 복지로(bokjiro.go.kr) → 산모·신생아 건강관리에서 지원금 확인.</div>
+      <div class="alert-box warn">⚠️ 정확한 지원금액은 출산 40일 전 신청 시 확정.</div>
+    </div>
+
+    <div class="checklist-item"><h4>4️⃣ 자동차보험 임산부 혜택</h4>
+      <div class="desc">임신 중 or 만 7세 이하 자녀 → 보험료 할인 또는 기납부 보험료 환급 가능. 보험사 고객센터에 "임산부 할인 특약 또는 환급" 요청!</div>
+    </div>
+
+    <div class="checklist-item"><h4>5️⃣ 우체국 무료 보험 가입</h4>
+      <div class="desc">임신 22주 이내에만 가입 가능! 완전 무료. 우체국 앱 → '대한민국 엄마보험' 검색 → 10분이면 완료.</div>
+      <div class="alert-box danger">⚠️ 22주 넘으면 가입 불가! 서두르세요.</div>
+    </div>
+
+    <div class="checklist-item"><h4>6️⃣ 필수 앱 다운로드</h4>
+      <table class="benefit-table"><tr><th>앱</th><th>특징</th><th>비용</th></tr>
+        <tr><td>📸 마미톡</td><td>병원 초음파 사진·영상 자동 분석·저장</td><td>약 3만원</td></tr>
+        <tr><td>📚 베이비빌리</td><td>임신 주수별 유용한 정보</td><td>무료</td></tr>
+        <tr><td>🛍️ 맘가이드</td><td>임산부 제품 추천, 안전 등급 A/B/C</td><td>무료</td></tr>
+      </table>
+    </div>
+
+    <div class="checklist-item"><h4>7️⃣ 출산병원 선정 후 예약</h4>
+      <div class="desc">인기 병원은 빨리 참. 고위험 임신 시 대학병원 분만실 서둘러야.</div>
+      <div class="alert-box info">💡 체크: 분만 방식(자연·무통·제왕절개) · 신생아실 · NICU · 조리원 거리</div>
+    </div>
+  </div>
+
+  <!-- 11주 전까지 -->
+  <div class="timeline-group">
+    <div class="timeline-label"><span class="timeline-badge plan">11주 전까지</span><h3>태아보험 골든타임</h3></div>
+
+    <div class="checklist-item"><h4>🛡️ 태아보험 가입</h4>
+      <div class="desc">1차 기형아 검사(10~13주) 전에 반드시! 검사 후 이상 소견 시 가입 어려움.</div>
+      <table class="benefit-table"><tr><th>핵심 특약</th><th>내용</th></tr>
+        <tr><td>1️⃣ 신생아 질병 입원 일당</td><td>출생 후 입원 시 일별 지급</td></tr>
+        <tr><td>2️⃣ 저체중아 입원비</td><td>2.5kg 미만 집중치료실 비용</td></tr>
+        <tr><td>3️⃣ 선천성 이상 수술비</td><td>선천성 질환 수술 지원</td></tr>
+      </table>
+      <div class="alert-box warn">⚠️ 사은품보다 보장이 먼저! 위 3가지 보장 한도 꼭 확인.</div>
+    </div>
+  </div>
+
+  <!-- 추가 혜택 -->
+  <div class="timeline-group">
+    <div class="timeline-label"><span class="timeline-badge extra">추가</span><h3>추가로 챙기면 좋은 혜택</h3></div>
+
+    <div class="checklist-item"><h4>🏥 외래 진료비 20% 감면</h4>
+      <div class="desc">건강보험 적용 병원에서 진료 시 본인 부담금 20% 감면! "임산부입니다" 한 마디. 치과 스케일링도 5,000원대로 가능!</div>
+    </div>
+
+    <div class="checklist-item"><h4>💉 예방접종</h4>
+      <table class="benefit-table"><tr><th>접종</th><th>내용</th></tr>
+        <tr><td>독감</td><td>임신 중 어느 시기든 가능, 무료</td></tr>
+        <tr><td>B형 간염</td><td>미접종자 의사 상담</td></tr>
+        <tr><td>Tdap (백일해)</td><td>27~36주 권장, 신생아 보호</td></tr>
+      </table>
+    </div>
+
+    <div class="checklist-item"><h4>✈️ 공항 혜택</h4>
+      <div class="desc"><strong>인천공항:</strong> 패스트트랙 이용 가능 (임산부 + 7세 이하 + 동반 3인). 체크인 카운터에서 교통 약자 스티커 수령.<br><strong>김포공항:</strong> 포디케어 서비스 — 도착부터 체크인까지 이동 도우미.</div>
+    </div>
+
+    <div class="checklist-item"><h4>🎁 다양한 임산부 할인</h4>
+      <div class="desc"><strong>성심당</strong> — 임산부 줄 안 서고 입장 + 동반 1인 + 5% 할인. 유명 뷔페·식당도 전용 혜택 운영 곳 많음.</div>
+    </div>
+  </div>
+
+  <div class="tip-card"><h3>📞 주요 문의처</h3>
+    <table class="contact-table"><tr><th>기관</th><th>연락처</th></tr>
+      <tr><td>임신·출산·육아 상담</td><td>☎ 1644-7373</td></tr>
+      <tr><td>보건복지 상담</td><td>☎ 129</td></tr>
+      <tr><td>고용노동부</td><td>☎ 1350</td></tr>
+      <tr><td>정부24 (맘편한 임신)</td><td><a href="https://gov.kr" target="_blank">gov.kr</a></td></tr>
+      <tr><td>복지로 (행복출산)</td><td><a href="https://bokjiro.go.kr" target="_blank">bokjiro.go.kr</a></td></tr>
+      <tr><td>고용24 (육아휴직)</td><td><a href="https://work24.go.kr" target="_blank">work24.go.kr</a></td></tr>
+      <tr><td>아이사랑 포털</td><td><a href="https://childcare.go.kr" target="_blank">childcare.go.kr</a></td></tr>
+    </table>
+  </div>
+
+  <div class="alert-box warn" style="margin-top:20px">⚠️ <strong>출산 후 잊지 마세요!</strong> 임신 중 → '맘편한 임신'(정부24) / 출산 후 → '행복출산 원스톱'(주민센터 or 복지로) ← 완전히 다른 서비스! 출산 후 60일 이내 신청 필수.</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 3: 생활 주의사항 -->
+<!-- ============================================================ -->
+<section class="main-section" id="lifestyle">
+  <div class="sec-header">
+    <h2>⚠️ 임신 중 생활 주의사항</h2>
+    <p>약물, 운동, 수면, 여행, 미용 등 일상에서 주의해야 할 점들</p>
+  </div>
+
+  <div class="info-banner"><h3>🏠 건강한 임신 생활 가이드</h3><p>임신 중에는 평소와 다른 생활 습관이 필요합니다. 태아에게 영향을 줄 수 있는 요소들을 미리 확인하고, 안전한 환경을 만들어주세요.</p></div>
+
+  <!-- 약물 -->
+  <div class="card"><h3>💊 약물 · 의약품</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">처방 없는 약물 복용 금지</div><div class="food-reason">모든 약은 반드시 산부인과 의사 상의 후 복용. 감기약, 소화제, 진통제도 예외 없음. 타이레놀(아세트아미노펜)은 의사 상담 후 사용 가능한 경우가 많음.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">이부프로펜 / 아스피린</div><div class="food-reason">NSAIDs 계열 진통제는 태아 심장·신장에 영향. 특히 초기·후기에 더 위험. 반드시 의사 처방.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">💡</div><div class="food-info"><div class="food-name">한약 / 건강보조식품</div><div class="food-reason">성분 불명확한 건강보조식품은 피하세요. 한약은 반드시 임산부 전문 한의사 상담 후.</div></div></div>
+  </div>
+
+  <!-- 운동 -->
+  <div class="card"><h3>🏃‍♀️ 운동 · 활동</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">✅</div><div class="food-info"><div class="food-name">권장 운동</div><div class="food-reason">걷기, 수영, 임산부 요가, 스트레칭. 하루 30분, 주 3~5회. 무리하지 않고 대화 가능한 강도로.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">피해야 할 운동</div><div class="food-reason">스키, 승마, 격렬한 구기 운동, 스쿠버 다이빙, 번지점프 등 충격·낙상 위험 있는 운동. 복부 충격 가능한 활동 모두 금지.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">무거운 물건 들기</div><div class="food-reason">10kg 이상 들지 않기. 허리에 무리가 가고 자궁에 압박. 쇼핑백도 분산해서 들기.</div></div></div>
+  </div>
+
+  <!-- 수면 -->
+  <div class="card"><h3>😴 수면 · 자세</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">✅</div><div class="food-info"><div class="food-name">왼쪽으로 누워 자기 (중기 이후)</div><div class="food-reason">왼쪽 옆으로 누우면 자궁이 하대정맥을 누르지 않아 태아에게 혈류·산소 공급이 원활. 임산부 전용 바디필로우 사용 추천.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">똑바로 누워 자기 (후기 주의)</div><div class="food-reason">28주 이후 똑바로 누우면 자궁이 하대정맥 압박 → 어지럼증·저혈압. 쿠션으로 약간 기울여서.</div></div></div>
+  </div>
+
+  <!-- 여행 -->
+  <div class="card"><h3>✈️ 여행 · 이동</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">✅</div><div class="food-info"><div class="food-name">안전한 여행 시기: 14~27주 (중기)</div><div class="food-reason">입덧이 줄고 활동성이 좋은 중기가 가장 안전. 비행기는 36주까지 탑승 가능(항공사마다 다름). 의사 소견서 지참.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">장시간 이동 시 주의</div><div class="food-reason">2시간마다 일어나 스트레칭. 혈전 예방 위해 다리 움직이기. 안전벨트는 배 아래쪽 골반 위로.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">위험 지역 여행 금지</div><div class="food-reason">지카바이러스 유행 지역, 말라리아 위험 지역 절대 금지. 해외여행 전 산부인과 상담 필수.</div></div></div>
+  </div>
+
+  <!-- 미용 -->
+  <div class="card"><h3>💄 미용 · 화장품</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">염색 · 파마</div><div class="food-reason">초기(12주까지)에는 피하기 권장. 중기 이후 환기 잘 되는 곳에서 두피에 닿지 않게 시술. 천연 염색제 사용 권장.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">레티놀 화장품</div><div class="food-reason">비타민A 유도체(레티놀, 레틴-A)는 태아 기형 위험. 임신 확인 즉시 사용 중단. 대체: 비타민C, 나이아신아마이드.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">네일 · 매니큐어</div><div class="food-reason">환기 잘 되는 곳에서. 톨루엔, 포름알데히드 無(3-Free 이상) 제품 선택. 젤네일 시 UV램프 단시간 노출.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">보톡스 · 필러 · 레이저</div><div class="food-reason">임신 중 모든 침습적 미용 시술 금지. 출산 후 수유 끝난 뒤로 미루세요.</div></div></div>
+  </div>
+
+  <!-- 목욕·온도 -->
+  <div class="card"><h3>🛁 목욕 · 온도</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">사우나 · 찜질방 · 핫터브</div><div class="food-reason">체온 38°C 이상 장시간 상승 → 태아 신경관 결손 위험. 핫터브, 뜨거운 반신욕 금지.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">✅</div><div class="food-info"><div class="food-name">미온수 샤워 (37~38°C)</div><div class="food-reason">따뜻한 샤워는 OK. 15분 이내. 목욕 시 미끄럼 주의, 화장실 미끄럼 방지 매트 설치 권장.</div></div></div>
+  </div>
+
+  <!-- 환경 -->
+  <div class="card"><h3>🏡 생활 환경</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">🚫</div><div class="food-info"><div class="food-name">흡연 · 간접흡연</div><div class="food-reason">조산, 저체중아, 영아돌연사 위험 증가. 간접흡연도 동일하게 위험. 전자담배 포함.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">반려동물 (특히 고양이)</div><div class="food-reason">고양이 배변 처리 시 톡소플라스마 감염 위험. 다른 가족에게 맡기고, 처리 시 반드시 장갑 착용. 강아지는 일반적으로 안전하나 과격한 놀이 주의.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">세제 · 방향제 · 살충제</div><div class="food-reason">환기 철저. 천연 세제 사용 권장. 살충제 뿌린 공간에 1~2시간 머물지 않기. 방향제는 천연 에센셜 오일도 고농도 주의.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">페인트 · 인테리어</div><div class="food-reason">VOC(휘발성 유기화합물) 노출 금지. 새 집 인테리어는 입주 전 충분한 환기(최소 2주). 직접 작업 절대 금지.</div></div></div>
+  </div>
+
+  <!-- 치과 -->
+  <div class="card"><h3>🦷 치과 치료</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">✅</div><div class="food-info"><div class="food-name">치과 검진 · 스케일링</div><div class="food-reason">임신 중 잇몸 출혈·염증 악화 흔함. 임산부 스케일링 약 5,000원. 중기(14~27주)가 가장 안전한 치료 시기.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">⚠️</div><div class="food-info"><div class="food-name">마취 · 발치 · X-ray</div><div class="food-reason">응급 상황 외에는 출산 후로 미루기 권장. 불가피 시 납 앞치마 착용 후 촬영. 치과 의사에게 임신 사실 반드시 알리기.</div></div></div>
+  </div>
+
+  <!-- 정서 -->
+  <div class="card"><h3>💆 정서 · 스트레스</h3>
+    <div class="food-item" style="background:transparent;padding:0;margin-bottom:10px"><div class="food-emoji">💡</div><div class="food-info"><div class="food-name">스트레스 관리</div><div class="food-reason">만성 스트레스는 코르티솔 분비 → 태아 발달에 영향. 명상, 산책, 가벼운 취미, 남편과 대화 등으로 관리. 임산부 우울증은 정상! 심할 때 전문가 상담 주저하지 마세요.</div></div></div>
+    <div class="food-item" style="background:transparent;padding:0"><div class="food-emoji">✅</div><div class="food-info"><div class="food-name">태교 활동</div><div class="food-reason">음악 감상, 동화책 읽어주기, 산책 등이 태아 정서 발달에 도움. 엄마의 행복한 감정이 가장 좋은 태교.</div></div></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 4: 영양제 가이드 -->
+<!-- ============================================================ -->
+<section class="main-section" id="supplement">
+  <div class="sec-header">
+    <h2>💊 시기별 영양제 가이드</h2>
+    <p>임신 전 기간에 필요한 영양소와 복용 타이밍을 확인하세요</p>
+  </div>
+
+  <div class="info-banner"><h3>💊 영양제 복용 원칙</h3><p>영양제는 음식만으로 부족한 영양소를 보충하기 위한 것입니다. 과다 복용은 오히려 해로울 수 있으니, 권장량을 지키고 담당 의사와 상의하세요.</p></div>
+
+  <div class="supp-timeline">
+    <div class="supp-item active-now"><div class="supp-card"><h4>⭐ 엽산 (Folic Acid)</h4><div class="supp-period">📅 임신 전 ~ 12주 (필수!)</div><div class="supp-desc">태아 신경관 결손(무뇌아, 척추이분증) 예방의 핵심. 임신 준비 시작부터 복용해야 효과적. 보건소에서 3개월분 무료 수령 가능!</div><div class="supp-dose">0.4 ~ 1mg / 일</div></div></div>
+
+    <div class="supp-item active-now"><div class="supp-card"><h4>🌞 비타민 D</h4><div class="supp-period">📅 임신 전 기간 (계속 복용)</div><div class="supp-desc">산모 면역력 강화, 태아 골격 형성 필수. 한국인 대부분 부족. 실내 생활 많으면 더 중요. 칼슘 흡수에도 필수.</div><div class="supp-dose">1,000 ~ 2,000 IU / 일</div></div></div>
+
+    <div class="supp-item"><div class="supp-card"><h4>🩸 철분 (Iron)</h4><div class="supp-period">📅 16주 ~ 출산 후 3개월</div><div class="supp-desc">혈액량 50% 증가에 대비. 빈혈 예방 필수. 식후 복용 + 비타민C와 함께 흡수율 ↑. 보건소 16주 이후 무료 지급. <strong>칼슘과 동시 복용 금지!</strong> 2~3시간 간격.</div><div class="supp-dose">30 ~ 60mg / 일</div></div></div>
+
+    <div class="supp-item"><div class="supp-card"><h4>🦴 칼슘 (Calcium)</h4><div class="supp-period">📅 20주 이후</div><div class="supp-desc">태아 골격·치아 형성. 부족 시 산모 뼈에서 칼슘 빠져나감 → 골다공증 위험. <strong>철분과 2~3시간 간격 필수!</strong> 취침 전 복용 추천.</div><div class="supp-dose">1,000mg / 일</div></div></div>
+
+    <div class="supp-item"><div class="supp-card"><h4>🧠 오메가3 / DHA</h4><div class="supp-period">📅 28주 ~ 36주</div><div class="supp-desc">태아 뇌·망막 발달의 핵심 영양소. EPA보다 DHA 비중 높은 제품 선택. 36주 이후에는 출혈 위험으로 중단 권장 (의사 상담).</div><div class="supp-dose">DHA 200mg 이상 / 일</div></div></div>
+
+    <div class="supp-item"><div class="supp-card"><h4>🧬 유산균 (프로바이오틱스)</h4><div class="supp-period">📅 임신 전 기간 (선택)</div><div class="supp-desc">임신 중 변비·질염 예방에 도움. 아토피 가족력 있으면 태아 알레르기 예방 효과도 기대. 임산부 전용 유산균 선택.</div><div class="supp-dose">제품별 권장량 준수</div></div></div>
+  </div>
+
+  <div class="tip-card"><h3>💝 영양제 복용 팁</h3><ul class="tip-list">
+    <li>엽산은 임신 확인 전부터 미리 복용하는 것이 이상적 (계획 임신)</li>
+    <li>철분 + 비타민C 함께 = 흡수율 2배 ↑ (오렌지, 키위와 함께)</li>
+    <li>철분 + 칼슘 동시 복용 X → 2~3시간 간격 두기</li>
+    <li>영양제 성분표에서 비타민A(레티놀) 과다 여부 반드시 확인</li>
+    <li>종합 비타민은 임산부 전용 제품만 (일반 종합비타민 X)</li>
+    <li>모든 영양제는 담당 의사와 상의 후 복용</li>
+  </ul></div>
+
+  <div class="card" style="margin-top:20px"><h3>⏰ 복용 시간표 예시</h3>
+    <table class="benefit-table"><tr><th>시간</th><th>영양제</th><th>비고</th></tr>
+      <tr><td>🌅 아침 식후</td><td>엽산 + 비타민D</td><td>공복 피하기</td></tr>
+      <tr><td>🌞 점심 식후</td><td>철분 + 비타민C</td><td>커피·녹차와 2시간 간격</td></tr>
+      <tr><td>🌙 저녁 식후</td><td>오메가3(DHA)</td><td>식사와 함께 흡수율 ↑</td></tr>
+      <tr><td>🛌 취침 전</td><td>칼슘 + 유산균</td><td>철분과 시간 간격 확보</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 5: 검사 일정 -->
+<!-- ============================================================ -->
+<section class="main-section" id="tests">
+  <div class="sec-header">
+    <h2>🏥 산전 검사 일정표</h2>
+    <p>임신 주수별 필수 검사 스케줄과 내용을 확인하세요</p>
+  </div>
+
+  <div class="info-banner"><h3>🏥 검사 비용 안내</h3><p>대부분의 산전 검사는 <strong>국민행복카드</strong>로 결제 가능합니다! 보건소에서 무료로 진행하는 기본 산전 검사도 있으니 먼저 확인하세요.</p></div>
+
+  <div class="alert-box danger" style="margin-bottom:20px">⚠️ <strong>태아보험 골든타임!</strong> 1차 기형아 검사(10~13주) 전에 태아보험 가입을 완료하세요. 검사 후 이상 소견 시 가입 불가.</div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">5~8</div><div class="week-label">주</div></div><div class="test-info"><h4>🔍 첫 초음파 검사</h4><p>아기집(태낭) 확인, 심장 박동 확인. 임신 확인서 발급. 자궁 외 임신 여부 확인.</p><div class="test-tags"><span class="test-tag">초음파</span><span class="test-tag insurance">행복카드 결제 가능</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">8~12</div><div class="week-label">주</div></div><div class="test-info"><h4>🧪 기본 산전 검사</h4><p>혈액형, 빈혈, 간기능, 풍진 항체, B형 간염, 매독, HIV, 소변 검사 등. <strong>보건소에서 무료로 가능!</strong></p><div class="test-tags"><span class="test-tag">혈액검사</span><span class="test-tag">소변검사</span><span class="test-tag insurance">보건소 무료</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">10~13</div><div class="week-label">주</div></div><div class="test-info"><h4>🔬 1차 기형아 검사 (NT 초음파)</h4><p>목덜미 투명대(NT) 측정 + 혈액검사. 다운증후군 등 염색체 이상 위험도 평가. 나이·위험도에 따라 NIPT(비침습 산전검사) 고려.</p><div class="test-tags"><span class="test-tag">초음파</span><span class="test-tag">혈액검사</span><span class="test-tag insurance">행복카드 결제 가능</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">15~20</div><div class="week-label">주</div></div><div class="test-info"><h4>🧬 2차 기형아 검사 (쿼드테스트)</h4><p>모체 혈액에서 4가지 물질 측정. 다운증후군, 에드워드증후군, 신경관 결손 선별검사.</p><div class="test-tags"><span class="test-tag">혈액검사</span><span class="test-tag insurance">행복카드 결제 가능</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">20~24</div><div class="week-label">주</div></div><div class="test-info"><h4>📸 정밀 초음파 (태아 정밀)</h4><p>태아의 모든 장기·구조 정밀 확인. 심장, 뇌, 척추, 사지, 내장 등. <strong>성별 확인</strong>도 이 시기! 가장 자세히 볼 수 있는 중요한 검사.</p><div class="test-tags"><span class="test-tag">정밀 초음파</span><span class="test-tag insurance">행복카드 결제 가능</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">24~28</div><div class="week-label">주</div></div><div class="test-info"><h4>🍬 임신성 당뇨 검사 (GCT/GTT)</h4><p>50g 포도당 음료 복용 후 1시간 뒤 혈당 측정. 기준치 초과 시 100g GTT 재검사. 조기 발견 시 식이 조절로 관리 가능!</p><div class="test-tags"><span class="test-tag">혈액검사</span><span class="test-tag insurance">행복카드 결제 가능</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">28~32</div><div class="week-label">주</div></div><div class="test-info"><h4>🔁 추적 초음파 + 빈혈 재검</h4><p>태아 성장 확인, 양수량 체크, 태반 위치 확인. 빈혈 재검사도 진행. 철분제 복용 상태 점검.</p><div class="test-tags"><span class="test-tag">초음파</span><span class="test-tag">혈액검사</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">34~36</div><div class="week-label">주</div></div><div class="test-info"><h4>🦠 GBS 검사 + NST 시작</h4><p>B군 연쇄상구균(GBS) 검사 — 질식 분만 시 신생아 감염 예방 위해 필수. 양성 시 분만 시 항생제 투여. NST(태아 심박수 모니터링) 시작.</p><div class="test-tags"><span class="test-tag">질 분비물 검사</span><span class="test-tag">NST</span></div></div></div>
+
+  <div class="test-card"><div class="test-week"><div class="week-num">36~40</div><div class="week-label">주</div></div><div class="test-info"><h4>🏁 분만 전 최종 점검</h4><p>매주 정기 검진. NST(태아 심박 모니터링), 내진, 태아 크기·위치 확인, 분만 방법 결정. 양수·태반 상태 최종 점검.</p><div class="test-tags"><span class="test-tag">매주 검진</span><span class="test-tag">NST</span><span class="test-tag">내진</span></div></div></div>
+
+  <div class="tip-card"><h3>💝 검사 꿀팁</h3><ul class="tip-list">
+    <li>보건소 무료 산전 검사 → 없는 항목만 병원 추가 (비용 절약!)</li>
+    <li>국민행복카드로 결제 가능 여부 매번 확인</li>
+    <li>검사 결과지는 사진 찍어 저장 (보험 청구 등에 필요)</li>
+    <li>부부 동반 검진 시 남편도 풍진·B형 간염 항체 확인 권장</li>
+    <li>고위험 임신(35세 이상, 가족력)은 NIPT 검사 고려</li>
+  </ul></div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 6: 혜택·지원금 -->
+<!-- ============================================================ -->
+<section class="main-section" id="benefits">
+  <div class="sec-header">
+    <h2>💰 임신·출산 혜택·지원금 총정리</h2>
+    <p>국가 혜택 + 지역별 혜택 — 놓치면 아까운 지원금</p>
+  </div>
+
+  <div class="info-banner"><h3>💰 혜택 확인 최고의 방법</h3><p><strong>보조금24(gov.kr)</strong> 맞춤 조회가 가장 정확합니다. 로그인 → 맞춤 혜택 조회 → 내 주소지 기준 모든 혜택 자동 안내!</p></div>
+
+  <!-- 국가 혜택 -->
+  <div class="region-section">
+    <div class="region-title">🇰🇷 전국 공통 혜택</div>
+
+    <div class="benefit-card"><h4>💳 국민행복카드</h4><div class="benefit-amount">단태아 100만원 / 다태아 140만원</div><div class="benefit-desc">임신·출산 진료비 지원. 산부인과·약국·보건기관. 발급일~출산 후 2년. 카드사 앱에서 신청 가능.</div></div>
+
+    <div class="benefit-card"><h4>🚄 KTX·SRT 임산부 할인</h4><div class="benefit-amount">임산부 + 동반 1인 30% 할인</div><div class="benefit-desc">맘편한 임신(gov.kr)에서 신청. 일반실 기준.</div></div>
+
+    <div class="benefit-card"><h4>🌿 엽산·철분제 무료</h4><div class="benefit-amount">보건소 무료 지급</div><div class="benefit-desc">엽산: 초기 3개월분 / 철분: 16주 이후. 보건소 임산부 등록 시.</div></div>
+
+    <div class="benefit-card"><h4>🏥 외래 진료비 20% 감면</h4><div class="benefit-amount">본인 부담금 20% 감면</div><div class="benefit-desc">"임산부입니다" 한 마디면 OK. 치과 스케일링도 약 5,000원!</div></div>
+
+    <div class="benefit-card"><h4>📮 우체국 무료 보험</h4><div class="benefit-amount">보험료 0원 (완전 무료)</div><div class="benefit-desc">22주 이내 가입. 우체국 앱 → '대한민국 엄마보험' 검색. 10분 완료.</div></div>
+
+    <div class="benefit-card"><h4>👩‍💼 단축근무 (직장인)</h4><div class="benefit-amount">임금 삭감 없이 하루 2시간 단축</div><div class="benefit-desc">12주 이내 + 32주 이후 적용. 회사 거부 시 고용노동부 ☎ 1350 신고.</div></div>
+  </div>
+
+  <!-- 서울 -->
+  <div class="region-section">
+    <div class="region-title">🏙️ 서울특별시</div>
+    <div class="benefit-card"><h4>🚌 임산부 교통비</h4><div class="benefit-amount">첫째 70만 / 둘째 80만 / 셋째↑ 100만원</div><div class="benefit-desc">대중교통·택시·유류비 모두 사용. 12주~출산 후 3개월 신청. 서울 90일 이상 거주 조건. seoulmomcare.com 또는 동주민센터.</div></div>
+    <div class="benefit-card"><h4>🏥 산후조리경비</h4><div class="benefit-amount">소득 기준 최대 약 100만원</div><div class="benefit-desc">소득 기준에 따라 차등 지원. 자치구별 출산장려금도 별도 확인.</div></div>
+  </div>
+
+  <!-- 인천 -->
+  <div class="region-section">
+    <div class="region-title">🌊 인천광역시</div>
+    <div class="benefit-card"><h4>🚌 임산부 교통비</h4><div class="benefit-amount">50만원 (인천e음 포인트)</div><div class="benefit-desc">12주~출산 후 3개월. 인천 180일 이상 거주 조건.</div></div>
+    <div class="benefit-card"><h4>🌟 천사지원금 · 아이 꿈 수당</h4><div class="benefit-amount">출산 후 별도 지원금</div><div class="benefit-desc">인천시 자체 출산 지원금. 인천시청 확인 필수.</div></div>
+  </div>
+
+  <!-- 경기 -->
+  <div class="region-section">
+    <div class="region-title">🌿 경기도</div>
+    <div class="benefit-card"><h4>📍 시·군별 출산장려금</h4><div class="benefit-amount">시군마다 상이 (첫째~셋째 차등)</div><div class="benefit-desc">수원·성남·화성·용인 등 각각 다름. <strong>반드시 거주지 시군구청에 문의!</strong></div></div>
+    <div class="benefit-card"><h4>🏥 분만취약지 교통비</h4><div class="benefit-amount">관외 병원 방문 교통비</div><div class="benefit-desc">군지역(연천·가평·양평 등) 거주 임산부.</div></div>
+    <div class="benefit-card"><h4>💊 산후조리비</h4><div class="benefit-amount">30~80만원 차등</div><div class="benefit-desc">소득 기준 충족 시.</div></div>
+  </div>
+
+  <!-- 대전 -->
+  <div class="region-section">
+    <div class="region-title">🔬 대전광역시</div>
+    <div class="benefit-card"><h4>💰 임신축하금 · 출산축하금</h4><div class="benefit-amount">구별 금액 상이</div><div class="benefit-desc">임신 확인 또는 출산 시 지급. 교통비 일부 지원도.</div></div>
+  </div>
+
+  <!-- 기타 -->
+  <div class="region-section">
+    <div class="region-title">🗺️ 기타 광역시 · 세종</div>
+    <div class="benefit-card"><h4>광주 · 대구 · 울산</h4><div class="benefit-desc">광역시 자체 지원 + 구·군 별도 지원 중복 적용 가능.</div></div>
+    <div class="benefit-card"><h4>세종시</h4><div class="benefit-desc">신도시 특성상 출산·육아 지원 정책이 풍부. 세종시청 복지과 또는 보건소 방문 확인.</div></div>
+  </div>
+
+  <!-- 농어촌 -->
+  <div class="region-section">
+    <div class="region-title">🌾 농어촌 · 인구감소지역</div>
+    <div class="info-banner"><h3>🌾 가장 혜택이 많은 지역!</h3><p>강원·전남·경북·충남 등 인구감소지역은 파격적인 출산장려금을 운영합니다.</p></div>
+    <table class="benefit-table"><tr><th>항목</th><th>내용</th></tr>
+      <tr><td>아동수당 우대</td><td>비수도권 월 <strong>10.5만원</strong>, 인구감소지역 최대 월 <strong>12만원</strong></td></tr>
+      <tr><td>출산장려금</td><td>일부 군 단위 수백~수천만원 지급</td></tr>
+      <tr><td>확인 방법</td><td>아이사랑 포털(childcare.go.kr) → 출산지원금 → 지역 선택</td></tr>
+    </table>
+    <div class="alert-box warn" style="margin-top:10px">⚠️ <strong>거주 기간 요건 주의!</strong> 대부분 출산 전 3~6개월 이상 거주 조건. 이사 계획 있으면 미리 확인!</div>
+  </div>
+
+  <div class="card" style="margin-top:20px"><h3>🔍 내 지역 혜택 찾는 가장 빠른 방법</h3>
+    <table class="benefit-table"><tr><th>방법</th><th>설명</th></tr>
+      <tr><td>① 보조금24 (최고 추천)</td><td>gov.kr 로그인 → 보조금24 → 맞춤 혜택 조회</td></tr>
+      <tr><td>② 아이사랑 포털</td><td>childcare.go.kr → 출산지원금 → 지역 선택</td></tr>
+      <tr><td>③ 보건소 방문/전화</td><td>가장 정확. "지역 혜택 전부 알려달라" 요청</td></tr>
+      <tr><td>④ 정부24</td><td>gov.kr → 행복출산 원스톱 → 지역별 확인</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TAB 7: 태아 발달 -->
+<!-- ============================================================ -->
+<section class="main-section" id="fetal">
+  <div class="sec-header">
+    <h2>👶 주차별 태아 발달</h2>
+    <p>우리 아기가 지금 어떻게 자라고 있는지 확인해보세요</p>
+  </div>
+
+  <div class="info-banner"><h3>🌟 태아 발달 이해하기</h3><p>주수별 태아의 크기와 발달 상황을 과일 크기에 비유해 쉽게 이해할 수 있습니다. 엄마 몸의 변화도 함께 확인하세요.</p></div>
+
+  <!-- 초기 -->
+  <h3 style="margin:24px 0 16px;font-size:1rem;display:flex;align-items:center;gap:8px">🌱 임신 초기 (1~12주)</h3>
+
+  <div class="dev-card"><div class="dev-icon">🌰</div><div class="dev-info"><h4>4~5주</h4><div class="dev-size">📏 약 0.1cm · 양귀비 씨앗 크기</div><p>수정란이 자궁에 착상. 태반과 양막 형성 시작. 심장이 만들어지기 시작합니다.</p><div class="mom-note">🤱 예정 생리가 없으면 임신 테스트! 가슴 통증, 피로감 시작.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🫐</div><div class="dev-info"><h4>6~7주</h4><div class="dev-size">📏 약 0.6~1cm · 블루베리 크기</div><p>심장 박동 시작! 팔다리 싹 형성. 뇌가 급격히 발달하기 시작합니다. 탯줄 형성.</p><div class="mom-note">🤱 입덧 시작. 자주 화장실 가게 됨. 극심한 피로감.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🍇</div><div class="dev-info"><h4>8~9주</h4><div class="dev-size">📏 약 2~3cm · 포도알 크기</div><p>손가락·발가락이 구분되기 시작. 눈·코·입 윤곽 형성. 모든 주요 장기의 기본 구조 완성.</p><div class="mom-note">🤱 입덧 절정기. 냄새 민감. 유방 커지기 시작.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🍓</div><div class="dev-info"><h4>10~12주</h4><div class="dev-size">📏 약 5~7cm · 딸기 크기</div><p>태아의 모든 장기 형성 완료(이후 성숙 단계). 손톱 형성. 움직이기 시작(엄마는 아직 못 느낌). 성별 결정(확인은 20주경).</p><div class="mom-note">🤱 입덧 서서히 줄어드는 분도. 자궁 골반 위로 올라오기 시작.</div></div></div>
+
+  <!-- 중기 -->
+  <h3 style="margin:32px 0 16px;font-size:1rem;display:flex;align-items:center;gap:8px">🌿 임신 중기 (13~27주)</h3>
+
+  <div class="dev-card"><div class="dev-icon">🍋</div><div class="dev-info"><h4>13~15주</h4><div class="dev-size">📏 약 8~10cm · 레몬 크기</div><p>지문 형성. 얼굴 근육 발달로 표정 짓기 시작. 양수를 삼키고 소변 배출 시작. 솜털(라누고) 나기 시작.</p><div class="mom-note">🤱 입덧 감소! 에너지 회복. 배가 살짝 나오기 시작.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🍐</div><div class="dev-info"><h4>16~19주</h4><div class="dev-size">📏 약 12~15cm · 배 크기</div><p>청각 발달 — 엄마 심장소리, 외부 소리 듣기 시작! 뼈가 단단해짐. 태지(피부 보호막) 형성.</p><div class="mom-note">🤱 태동 느끼기 시작! (초산모는 18~20주). 배가 눈에 띄게 나옴.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🍌</div><div class="dev-info"><h4>20~23주</h4><div class="dev-size">📏 약 25~28cm · 바나나 크기</div><p>눈썹·속눈썹 형성. 미각 발달 — 양수 맛을 느낌! 수면-각성 주기 형성. 성별 확인 가능(정밀 초음파).</p><div class="mom-note">🤱 태동 활발! 다리 경련, 부종 시작 가능. 배에 임신선 나타날 수 있음.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🌽</div><div class="dev-info"><h4>24~27주</h4><div class="dev-size">📏 약 30~35cm · 옥수수 크기</div><p>폐의 계면활성제 생산 시작(호흡 준비). 눈을 뜨고 감을 수 있음! 뇌가 급속 발달. 28주부터는 조산 시 생존율 높아짐.</p><div class="mom-note">🤱 임신성 당뇨 검사 시기. 요통·변비 증가. 브랙스턴-힉스 수축 시작 가능.</div></div></div>
+
+  <!-- 후기 -->
+  <h3 style="margin:32px 0 16px;font-size:1rem;display:flex;align-items:center;gap:8px">🌸 임신 후기 (28~40주)</h3>
+
+  <div class="dev-card"><div class="dev-icon">🥥</div><div class="dev-info"><h4>28~31주</h4><div class="dev-size">📏 약 38~42cm · 코코넛 크기</div><p>피하 지방 축적 → 피부가 불투명해짐. REM 수면(꿈꾸는 수면) 시작. 뼈 외 모든 기관 거의 성숙. 빛에 반응.</p><div class="mom-note">🤱 숨이 차기 시작. 자주 화장실. 발목 부종 증가. 수면 불편.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🍍</div><div class="dev-info"><h4>32~35주</h4><div class="dev-size">📏 약 43~46cm · 파인애플 크기</div><p>폐 거의 성숙. 면역 항체를 엄마로부터 받기 시작. 머리를 아래로 향하기 시작(두위). 체중 급증.</p><div class="mom-note">🤱 배가 많이 커짐. 위산 역류·숨참 심화. 야간 빈뇨. 출산 준비 시작!</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🍉</div><div class="dev-info"><h4>36~37주</h4><div class="dev-size">📏 약 47~48cm · 작은 수박 크기</div><p>폐 완전 성숙. 소화 시스템 준비 완료. 라누고(솜털) 빠짐. 체중 계속 증가. 태아가 골반으로 하강 시작.</p><div class="mom-note">🤱 배가 내려앉는 느낌. 숨쉬기는 편해지나 골반 압박감. 이슬·가진통 가능.</div></div></div>
+
+  <div class="dev-card"><div class="dev-icon">🎃</div><div class="dev-info"><h4>38~40주</h4><div class="dev-size">📏 약 49~52cm · 약 3~3.5kg · 작은 호박 크기</div><p>모든 기관 완전 성숙! 면역 항체 충분히 받음. 지방 축적 완료 — 통통한 아기. 언제든 세상에 나올 준비 완료!</p><div class="mom-note">🤱 이슬, 양수 파수, 규칙적 진통 → 출산 신호! 입원 가방 미리 준비하세요.</div></div></div>
+
+  <div class="tip-card"><h3>💝 태아 발달 참고사항</h3><ul class="tip-list">
+    <li>크기와 체중은 평균값이며, 개인차가 있습니다</li>
+    <li>태동은 초산모 18~20주, 경산모 15~18주부터 느낌</li>
+    <li>태동이 갑자기 줄면 반드시 병원 방문</li>
+    <li>37주부터 만삭(Early Term), 39~40주가 완전 만삭(Full Term)</li>
+    <li>예정일은 40주지만 ±2주는 정상 범위</li>
+  </ul></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="disclaimer">
+    <p>⚕️ 이 가이드는 일반적인 정보를 제공하며, 의학적 조언을 대체하지 않습니다.<br>개인별 상황이 다를 수 있으니 반드시 담당 산부인과 전문의와 상담하세요.</p>
+  </div>
+  <p>2026년 기준 · 실전 경험 기반 정리 · 참고: WHO, 대한산부인과학회, FDA, 정부24<br>지자체별 지원 내용은 수시 변경되므로 최신 정보 확인 권장</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="맨 위로">↑</button>
+
+<script>
+// ===== MAIN TAB SWITCHING =====
+const mainBtns = document.querySelectorAll('.main-tab-btn');
+const mainSections = document.querySelectorAll('.main-section');
+
+mainBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.main;
+    mainBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    mainSections.forEach(s => {
+      s.classList.remove('active');
+      if (s.id === target) s.classList.add('active');
+    });
+    // Clear food search when switching tabs
+    const si = document.getElementById('searchInput');
+    if (si && si.value) { si.value = ''; clearSearch(); }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// ===== SUB TAB SWITCHING (Food guide) =====
+const subBtns = document.querySelectorAll('.sub-tab-btn');
+const subSections = document.querySelectorAll('.sub-section');
+
+subBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.sub;
+    subBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    subSections.forEach(s => {
+      s.classList.remove('active');
+      if (s.id === 'sub-' + target) s.classList.add('active');
+    });
+    const si = document.getElementById('searchInput');
+    if (si && si.value) { si.value = ''; clearSearch(); }
+  });
+});
+
+// ===== FOOD SEARCH =====
+const searchInput = document.getElementById('searchInput');
+const searchCount = document.getElementById('searchCount');
+
+searchInput.addEventListener('input', (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  if (!q) { clearSearch(); return; }
+  let total = 0;
+  const activeSubSection = document.querySelector('.sub-section.active');
+  if (!activeSubSection) return;
+  activeSubSection.querySelectorAll('.severity-group').forEach(g => {
+    let vis = false;
+    g.querySelectorAll('.food-item').forEach(item => {
+      const n = (item.dataset.name || '').toLowerCase();
+      const dn = (item.querySelector('.food-name')?.textContent || '').toLowerCase();
+      const r = (item.querySelector('.food-reason')?.textContent || '').toLowerCase();
+      if (n.includes(q) || dn.includes(q) || r.includes(q)) {
+        item.classList.remove('hidden'); item.classList.add('highlight'); vis = true; total++;
+      } else {
+        item.classList.add('hidden'); item.classList.remove('highlight');
+      }
+    });
+    g.classList.toggle('hidden', !vis);
+  });
+  searchCount.textContent = `"${e.target.value}" 검색 결과: ${total}개`;
+  searchCount.classList.add('visible');
+});
+
+function clearSearch() {
+  document.querySelectorAll('.food-item').forEach(i => i.classList.remove('hidden','highlight'));
+  document.querySelectorAll('.severity-group').forEach(g => g.classList.remove('hidden'));
+  searchCount.classList.remove('visible');
+}
+
+// ===== BACK TO TOP =====
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== SCROLL ANIMATION =====
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.severity-group,.tip-card,.info-banner,.card,.checklist-item,.dev-card,.test-card,.benefit-card,.supp-item,.region-section').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
